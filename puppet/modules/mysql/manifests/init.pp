@@ -6,7 +6,7 @@ class mysql::install {
   }
 
   exec {'Set MySQL root password':
-    subscribe => Package['mysql-server'],
+    subscribe   => Package['mysql-server'],
     refreshonly => true,
     unless      => "mysqladmin -uroot -p${password} status",
     path        => '/bin:/usr/bin',
@@ -17,6 +17,7 @@ class mysql::install {
 class mysql::php5-mysql {
   package {'php5-mysql':
     ensure  => installed,
-    require => Package['php5-fpm']
+    require => Package['php5-fpm'],
+    notify  => Service['php5-fpm']
   }
 }
