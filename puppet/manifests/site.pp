@@ -7,3 +7,4 @@ class {'git::install': }
 class {'mysql::install': }
 class {'basics': }
 class {'nginx': }
+class {'php5-fpm': }
