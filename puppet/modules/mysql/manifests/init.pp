@@ -6,10 +6,7 @@ class mysql::install {
   }
 
   exec {'Set MySQL root password':
-    subscribe => [
-      Package['mysql-server'],
-      Package['mysql-client']
-    ],
+    subscribe => Package['mysql-server'],
     refreshonly => true,
     unless      => "mysqladmin -uroot -p${password} status",
     path        => '/bin:/usr/bin',
