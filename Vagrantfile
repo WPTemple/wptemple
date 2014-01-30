@@ -33,6 +33,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.network :public_network
   config.vm.network :private_network, ip: '192.168.56.12'
 
+  if defined? VagrantPlugins::HostsUpdater
+    config.hostsupdater.aliases = ["#{config.vm.hostname}.dev"]
+  end
+
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
   # config.ssh.forward_agent = true
