@@ -10,4 +10,6 @@ class php5-fpm {
     hasstatus  => true,
     require    => Package['php5-fpm']
   }
+
+  include mysql::php5-mysql
 }

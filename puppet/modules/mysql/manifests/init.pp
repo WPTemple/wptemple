@@ -13,3 +13,10 @@ class mysql::install {
     command     => "mysqladmin -uroot password ${password}"
   }
 }
+
+class mysql::php5-mysql {
+  package {'php5-mysql':
+    ensure  => installed,
+    require => Package['php5-fpm']
+  }
+}
