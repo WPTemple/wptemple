@@ -1,7 +1,7 @@
 class mysql::install {
   $password = 'vagrant'
 
-  package {['mysql-server', 'mysql-client']:
+  package {'mysql-server':
     ensure => installed
   }
 
