@@ -29,6 +29,7 @@ class wordpress::dl_and_install {
   exec {'download-wordpress':
     path    => '/bin:/usr/bin',
     cwd     => "${wp_root}",
+    unless  => 'test -e latest.tar.gz',
     command => "wget ${wp_dl}",
     creates => "${wp_root}/latest.tar.gz"
   }
@@ -36,6 +37,7 @@ class wordpress::dl_and_install {
   exec {'untar-wordpress':
     path    => '/bin:/usr/bin',
     cwd     => "${wp_root}",
+    unless  => 'test -e wp-load.php',
     command => 'tar xvzf latest.tar.gz; mv wordpress/* .; rmdir wordpress',
     require => Exec['download-wordpress']
   }
