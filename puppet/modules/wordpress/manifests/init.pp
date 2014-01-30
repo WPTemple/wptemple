@@ -41,4 +41,8 @@ class wordpress::dl_and_install {
     command => 'tar xvzf latest.tar.gz; mv wordpress/* .; rmdir wordpress',
     require => Exec['download-wordpress']
   }
+
+  file {"${wp_root}/wp-config.php":
+    content => template('wordpress/wp-config.erb')
+  }
 }
