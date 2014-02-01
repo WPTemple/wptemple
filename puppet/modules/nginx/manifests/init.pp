@@ -11,6 +11,15 @@ class nginx {
     require    => Package['nginx']
   }
 
+  file {'/etc/nginx/nginx.conf':
+    owner   => root,
+    group   => root,
+    mode    => '0644',
+    require => Package['nginx'],
+    source  => 'puppet:///nginx/nginx.conf',
+    notify  => Service['nginx']
+  }
+
   vhost {"${hostname}":
     name    => "${hostname}",
     wwwroot => '/vagrant',
