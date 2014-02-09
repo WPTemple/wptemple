@@ -6,7 +6,7 @@ class phpmyadmin {
 
   package {'phpmyadmin':
     ensure  => installed,
-    require => Package['nginx', 'php5-fpm']
+    require => Package['nginx', 'php5-fpm', 'mysql']
   }
 
   file {'/etc/phpmyadmin/config-db.php':
@@ -14,6 +14,7 @@ class phpmyadmin {
     group   => 'www-data',
     mode    => '640',
     replace => true,
+    require => Package['phpmyadmin'],
     content => template('phpmyadmin/config-db.php.erb')
   }
 
@@ -22,11 +23,13 @@ class phpmyadmin {
     group   => 'root',
     mode    => '600',
     replace => true,
+    require => Package['phpmyadmin'],
     content => template('phpmyadmin/dbconfig-common-phpmyadmin.conf.erb')
   }
 
   file {"${wwwroot}/phpmyadmin":
     ensure => 'link',
+    require => Package['phpmyadmin'],
     target => '/usr/share/phpmyadmin'
   }
 }
