@@ -17,7 +17,7 @@ This setup contains the following:
 And of course, WordPress.
 
 ## Usage
-To start, fork this repository and clone it. You should then configure the `config.vm.hostname`, `config.vm.network`, etc. in `Vagrantfile` to your liking.
+To start, fork this repository and clone it. Copy `Vagrantfile.sample` to `Vagrantfile` and open it in your editor. You should then configure the `config.vm.hostname`, `config.vm.network`, etc. in `Vagrantfile` to your liking.
 
 If you wish to create a totally new WordPress installation, simply run `vagrant up` inside the new directory. If you are importing an existing WordPress installation, copy your `wp-content` directory (or theoretically any other files you want).
 
