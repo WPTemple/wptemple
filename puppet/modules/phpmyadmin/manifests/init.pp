@@ -6,7 +6,7 @@ class phpmyadmin {
 
   package {'phpmyadmin':
     ensure  => installed,
-    require => Package['nginx', 'php5-fpm', 'mysql']
+    require => Package['nginx', 'php5-fpm', 'mysql-server']
   }
 
   file {'/etc/phpmyadmin/config-db.php':
