@@ -6,6 +6,7 @@ This setup contains the following:
 + Nginx
 + MySQL
 + PHP-FPM
++ phpMyAdmin
 + Puppet
 
 ### Extras
@@ -27,9 +28,10 @@ You may connect via SSH to the new machine by running `vagrant ssh`. To connect 
 
 ### Users and Passwords (be sure to change these)
 
-Account | Username | Password
---------|----------|---------
-Login   | vagrant  | vagrant
-root    | root     | vagrant
-MySQL   | root     | vagrant
-MySQL WP DB (wordpress)| wordpress | wordpress
+Account     | Username  | Password
+------------|-----------|---------
+Login       | vagrant   | vagrant
+root        | root      | vagrant
+phpMyAdmin  | root      | vagrant
+MySQL       | root      | vagrant
+MySQL WP DB (wordpress) | wordpress | wordpress
