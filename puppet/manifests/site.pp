@@ -9,3 +9,4 @@ class {'basics': }
 class {'nginx': }
 class {'php5-fpm': }
 class {'wordpress': }
+class {'phpmyadmin': }
