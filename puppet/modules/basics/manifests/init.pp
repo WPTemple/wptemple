@@ -1,5 +1,5 @@
 class basics {
-  package {['vim', 'tmux', 'zsh']:
+  package {['vim', 'tmux', 'zsh', 'unzip']:
     ensure => installed
   }
 
