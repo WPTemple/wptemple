@@ -4,6 +4,8 @@ server {
     listen      <%= listen_port %>;
     server_name <%= name %><% aliases.each do |a| -%> <%= a %><% end -%>;
 
+    client_max_body_size 100M;
+
     access_log  /var/log/nginx/<%= name %>.access.log;
     error_log   /var/log/nginx/<%= name %>.error.log;
 
