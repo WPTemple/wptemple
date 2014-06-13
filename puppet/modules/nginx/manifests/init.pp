@@ -20,6 +20,12 @@ class nginx {
     notify  => Service['nginx']
   }
 
+  exec {'add-vagrant-to-www-data':
+    unless  => "grep -q 'www-data\\S*vagrant' /etc/group",
+    path    => '/bin:/usr/bin:/usr/sbin',
+    command => 'usermod -aG www-data vagrant'
+  }
+
   vhost {"${hostname}":
     name    => "${hostname}",
     wwwroot => '/vagrant',

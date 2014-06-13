@@ -57,10 +57,4 @@ class basics {
     command => 'echo export PATH=\$PATH:/opt/vagrant_ruby/bin >> .zshrc',
     require => File['/home/vagrant/.zshrc']
   }
-
-  exec {'add-vagrant-to-www-data':
-    unless  => "grep -q 'www-data\\S*vagrant' /etc/group",
-    path    => '/bin:/usr/bin:/usr/sbin',
-    command => 'usermod -aG www-data vagrant'
-  }
 }
