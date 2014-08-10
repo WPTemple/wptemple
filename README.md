@@ -2,19 +2,12 @@
 A somewhat reasonable Vagrant setup that might be useful for quick WordPress development environments.
 
 This setup contains the following:
-### Servers and Configurations
 + Nginx
 + MySQL
 + PHP-FPM
 + phpMyAdmin
 + Puppet
-
-### Extras
-+ zsh + oh-my-zsh
-+ vim + .vimrc
-+ tmux + .tmux.conf
-
-And of course, WordPress.
++ WordPress
 
 ## Usage
 To start, fork this repository and clone it. Copy `Vagrantfile.sample` to `Vagrantfile` and open it in your editor. You should then configure the `config.vm.hostname`, `config.vm.network`, etc. in `Vagrantfile` to your liking.
@@ -26,7 +19,7 @@ When you run `vagrant up`, if all goes well the VM will start, and Puppet will b
 ### Connecting
 You may connect via SSH to the new machine by running `vagrant ssh`. To connect with a web browser, use the IP you provided in the `Vagrantfile` or, if you have the Vagrant HostsUpdater plugin installed, the hostname.
 
-### Users and Passwords (be sure to change these)
+### Default Users and Passwords
 
 Account     | Username  | Password
 ------------|-----------|---------
