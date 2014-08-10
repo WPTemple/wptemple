@@ -2,6 +2,7 @@
 A somewhat reasonable Vagrant setup that might be useful for quick WordPress development environments.
 
 This setup contains the following:
+
 + Nginx
 + MySQL
 + PHP-FPM
