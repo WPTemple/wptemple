@@ -6,4 +6,8 @@ wp-content/plugins/
 wp-content/uploads/
 wp-content/upgrade/
 config.codekit
-
+advanced-cache.php
+mysql.sql
+object-cache.php
+infinitewp
+wp-content/mu-plugins
