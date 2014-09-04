@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/Genesis-Sandbox"]
+	path = wp-content/themes/Genesis-Sandbox
+	url = git@github.com:protechig/Genesis-Sandbox.git
