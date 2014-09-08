@@ -11,4 +11,5 @@ mysql.sql
 object-cache.php
 infinitewp
 wp-content/mu-plugins
-latest.tar.gz
+.sass-cache
+.sass-cache/*
