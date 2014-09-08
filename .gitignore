@@ -13,3 +13,4 @@ infinitewp
 wp-content/mu-plugins
 .sass-cache
 .sass-cache/*
+*.old
