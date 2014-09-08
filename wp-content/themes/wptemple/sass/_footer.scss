@@ -1,0 +1,18 @@
+.footer-widgets {
+  background: $dark;
+  color: $light;
+  .wrap {
+    @include outer-container;
+  }
+}
+.site-footer {
+  background: $dark;
+  color: $light;
+  .wrap {
+    @include outer-container;
+    }
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
