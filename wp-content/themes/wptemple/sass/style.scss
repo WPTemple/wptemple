@@ -20,6 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* Import Local Styles */
 @import "defaults";
+@import "layout";
 @import "headings";
 @import "header";
 @import "navigation";
@@ -28,3 +29,4 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "sidebar";
 @import "sidebaralt";
 @import "footer";
+@import "responsive"
