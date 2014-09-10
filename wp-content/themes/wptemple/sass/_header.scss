@@ -4,3 +4,7 @@
 .title-area {
     @include outer-container;
 }
+
+.header-image .site-header .wrap{
+    @include outer-container;
+}
