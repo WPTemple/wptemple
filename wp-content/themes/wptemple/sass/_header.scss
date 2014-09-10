@@ -4,3 +4,25 @@
 .title-area {
     @include outer-container;
 }
+
+.header-image {
+    .site-title a {
+        background-position: center !important;
+        background-size: contain !important;
+        float: left;
+        display: block;
+        min-height: 100px;
+        text-indent: -9999px;
+        width: 100%;
+    }
+    .site-description {
+        display: block;
+        height: 0;
+        margin-bottom: 0;
+        text-indent: -9999px;
+    }
+    .site-header .wrap {
+        @include outer-container;
+    }
+}
+

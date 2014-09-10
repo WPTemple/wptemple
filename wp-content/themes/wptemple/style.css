@@ -521,6 +521,28 @@ a {
     display: table;
     clear: both; }
 
+.header-image .site-title a {
+  background-position: center !important;
+  background-size: contain !important;
+  float: left;
+  display: block;
+  min-height: 100px;
+  text-indent: -9999px;
+  width: 100%; }
+.header-image .site-description {
+  display: block;
+  height: 0;
+  margin-bottom: 0;
+  text-indent: -9999px; }
+.header-image .site-header .wrap {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .header-image .site-header .wrap:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 .footer-widgets {
   background: #333;
   color: #fff; }
