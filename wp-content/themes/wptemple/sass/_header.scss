@@ -1,11 +1,26 @@
 .site-header {
   background: $dark;
-}
-.title-area {
-    @include outer-container;
-}
+  aside {
+      width: 30%;
+      float: right;
+  }
+  .wrap {
+      @include outer-container;
+  }
 
+    .title-area {
+        width: 50%;
+        float: left;
+    }
+    .site-description {
+        color: $light;
+    }
+    
+}
 .header-image {
+    .title-area {
+        float: left;
+    }
     .site-title a {
         background-position: center !important;
         background-size: contain !important;
