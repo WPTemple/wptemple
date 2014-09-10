@@ -1,16 +1,14 @@
 .site-header {
   background: $dark;
   aside {
-      width: 30%;
-      float: right;
+      @include span-columns(6);
   }
   .wrap {
       @include outer-container;
   }
 
     .title-area {
-        width: 50%;
-        float: left;
+        @include span-columns(6);
     }
     .site-description {
         color: $light;

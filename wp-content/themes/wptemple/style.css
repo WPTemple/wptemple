@@ -512,8 +512,12 @@ a {
 .site-header {
   background: #333; }
   .site-header aside {
-    width: 30%;
-    float: right; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .site-header aside:last-child {
+      margin-right: 0; }
   .site-header .wrap {
     max-width: 68em;
     margin-left: auto;
@@ -523,8 +527,12 @@ a {
       display: table;
       clear: both; }
   .site-header .title-area {
-    width: 50%;
-    float: left; }
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .site-header .title-area:last-child {
+      margin-right: 0; }
   .site-header .site-description {
     color: #fff; }
 
