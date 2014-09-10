@@ -511,16 +511,25 @@ a {
 
 .site-header {
   background: #333; }
+  .site-header aside {
+    width: 30%;
+    float: right; }
+  .site-header .wrap {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .site-header .wrap:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .site-header .title-area {
+    width: 50%;
+    float: left; }
+  .site-header .site-description {
+    color: #fff; }
 
-.title-area {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .title-area:after {
-    content: "";
-    display: table;
-    clear: both; }
-
+.header-image .title-area {
+  float: left; }
 .header-image .site-title a {
   background-position: center !important;
   background-size: contain !important;
