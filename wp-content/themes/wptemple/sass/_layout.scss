@@ -19,3 +19,8 @@ $visual-grid-opacity: 0.1;
     }
   }
 }
+
+/* Full Width Content */
+.full-width-content .site-inner .content {
+    @include span-columns(12);
+}
