@@ -509,6 +509,15 @@ a {
         .site-inner .siebar:last-child {
           margin-right: 0; } }
 
+/* Full Width Content */
+.full-width-content .site-inner .content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .full-width-content .site-inner .content:last-child {
+    margin-right: 0; }
+
 .site-header {
   background: #333; }
   .site-header aside {
