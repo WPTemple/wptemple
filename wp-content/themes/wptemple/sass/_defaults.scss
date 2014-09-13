@@ -437,3 +437,7 @@ a {
   text-decoration:none;
   &:hover { color: shade($color-cta, 30%); }
 }
+
+body {
+  background: #f8f5f5;
+}
