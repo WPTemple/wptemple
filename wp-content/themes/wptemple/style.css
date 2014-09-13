@@ -476,6 +476,9 @@ a {
 body {
   background: #f8f5f5; }
 
+.alignright {
+  float: right; }
+
 .site-inner {
   max-width: 68em;
   margin-left: auto;
