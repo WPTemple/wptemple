@@ -589,8 +589,9 @@ body {
     display: table;
     clear: both; }
   .genesis-nav-menu .menu-item {
-    display: inline-block;
-    text-align: left; }
+    display: block;
+    text-align: left;
+    float: left; }
   .genesis-nav-menu a {
     border: none;
     color: #333;
