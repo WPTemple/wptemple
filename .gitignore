@@ -1,6 +1,5 @@
 .vagrant/
 latest.tar.gz
-Vagrantfile
 phpmyadmin
 wp-config.php
 wp-content/plugins/
