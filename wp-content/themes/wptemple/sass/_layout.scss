@@ -24,3 +24,17 @@ $visual-grid-opacity: 0.1;
 .full-width-content .site-inner .content {
     @include span-columns(12);
 }
+
+/* Homepage */
+main.content {
+    @include outer-container;
+    .grid-post-area {
+        padding: 10px;
+        &:not(.top) {
+            @include span-columns(6);
+            &.even {
+                @include omega;
+            }
+        }
+    }
+}
