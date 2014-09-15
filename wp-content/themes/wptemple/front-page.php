@@ -33,10 +33,12 @@ function wpt_home_loop() {
             <a href="<?php echo get_permalink($post->ID); ?>">
                 <img class="grid-post-thumbnail" src="<?php echo get_thumbnail($post); ?>">
             </a>
-            <a href="<?php echo get_permalink($post->ID); ?>">
-                <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
-            </a>
-            <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
+            <div class="grid-post-content-box">
+                <a href="<?php echo get_permalink($post->ID); ?>">
+                    <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
+                </a>
+                <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
+            </div>
         </div>
 <?php
     }
