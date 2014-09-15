@@ -458,13 +458,42 @@ main.content {
     background-color: #e9e9e9;
     margin-bottom: 30px;
     min-height: 400px; }
-    main.content .grid-post-area .grid-post-thumbnail {
-      width: 100%;
-      height: auto; }
+    main.content .grid-post-area .grid-post-upper {
+      position: relative;
+      min-height: 400px; }
+      main.content .grid-post-area .grid-post-upper .grid-post-thumbnail {
+        width: 100%;
+        height: auto; }
+      main.content .grid-post-area .grid-post-upper .grid-post-comment-count {
+        position: absolute;
+        bottom: 30px;
+        right: 0px;
+        background-color: #A385BE;
+        padding: 15px;
+        color: #fff;
+        text-transform: lowercase; }
     main.content .grid-post-area.top {
       margin-top: 30px; }
     main.content .grid-post-area .grid-post-content-box {
       padding: 10px; }
+      main.content .grid-post-area .grid-post-content-box .grid-post-read-more {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 20px 0;
+        padding: 20px 0 20px 0; }
+        main.content .grid-post-area .grid-post-content-box .grid-post-read-more a {
+          background-color: #a385be;
+          padding: 15px 20px 15px 20px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          color: #fff;
+          text-transform: lowercase; }
     main.content .grid-post-area:not(.top) {
       float: left;
       display: block;
@@ -474,24 +503,6 @@ main.content {
         margin-right: 0; }
       main.content .grid-post-area:not(.top).even {
         margin-right: 0; }
-    main.content .grid-post-area .grid-post-read-more {
-      width: 100%;
-      text-align: center;
-      margin: 20px 0 20px 0;
-      padding: 20px 0 20px 0; }
-      main.content .grid-post-area .grid-post-read-more a {
-        background-color: #a385be;
-        padding: 15px 20px 15px 20px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        color: #fff;
-        text-transform: lowercase; }
 
 .site-header {
   background: #333;

@@ -42,11 +42,16 @@ function wpt_home_loop() {
         $tag_links = array_map(function ($tag) {
             return '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
         }, $tags);
+
+        $comments = get_comments_number($post->ID);
 ?>
         <div class="grid-post-area <?php echo $extra_class;?>">
-            <a href="<?php echo get_permalink($post->ID); ?>">
-                <?php echo get_grid_thumbnail($post, $thumbnail_size); ?>
-            </a>
+            <div class="grid-post-upper">
+                <a href="<?php echo get_permalink($post->ID); ?>">
+                    <?php echo get_grid_thumbnail($post, $thumbnail_size); ?>
+                </a>
+                <span class="grid-post-comment-count"><?php printf(ngettext('%d comment', '%d comments', $comments), $comments); ?></span>
+            </div>
             <div class="grid-post-content-box">
                 <a href="<?php echo get_permalink($post->ID); ?>">
                     <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
