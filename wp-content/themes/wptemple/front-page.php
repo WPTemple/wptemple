@@ -21,7 +21,7 @@ function wpt_home_loop() {
 ?>
     <?php for ($i = 0; $i < count($posts); $i++): ?>
     <?php $post = $posts[$i]; ?>
-    <div class="grid-post-area<?php echo ($i === 0) ? 'top' : ''; ?>
+    <div class="grid-post-area<?php echo ($i === 0) ? ' top' : ''; ?>">
         <a href="<?php echo get_permalink($post->ID); ?>">
             <img class="grid-post-thumbnail" src="<?php echo get_thumbnail($post); ?>">
         </a>
