@@ -7,8 +7,6 @@ sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "font"
-add_import_path "sass/bourbon"
-add_import_path "sass/neat"
 
 output_style = :nested
 environment = :production
