@@ -61,7 +61,7 @@ function wpt_home_loop() {
                     <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
                 </a>
                 <div class="grid-post-meta">
-                    <span class="grid-post-published">Published <?php echo get_the_date('d M', $post->ID); ?> by <?php echo get_the_author_meta('display_name', $post->post_author); ?></span><br>
+                    <span class="grid-post-published">Published <?php echo get_the_date('d M', $post->ID); ?> by <?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
                     <span class="grid-post-categories">Filed under: <?php echo implode(', ', $category_links); ?>, tags: <?php echo implode(', ', $tag_links); ?></span>
                 </div>
                 <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
