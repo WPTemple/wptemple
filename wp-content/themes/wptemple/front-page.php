@@ -56,6 +56,9 @@ function wpt_home_loop() {
                     <span class="grid-post-categories">Filed under: <?php echo implode(', ', $category_links); ?>, tags: <?php echo implode(', ', $tag_links); ?></span>
                 </div>
                 <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
+                <div class="grid-post-read-more">
+                    <a href="<?php echo get_permalink($post->ID); ?>">Read More</a>
+                </div>
             </div>
         </div>
 <?php

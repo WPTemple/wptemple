@@ -474,6 +474,24 @@ main.content {
         margin-right: 0; }
       main.content .grid-post-area:not(.top).even {
         margin-right: 0; }
+    main.content .grid-post-area .grid-post-read-more {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0 20px 0;
+      padding: 20px 0 20px 0; }
+      main.content .grid-post-area .grid-post-read-more a {
+        background-color: #a385be;
+        padding: 15px 20px 15px 20px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: #fff;
+        text-transform: lowercase; }
 
 .site-header {
   background: #333;

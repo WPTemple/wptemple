@@ -53,7 +53,21 @@ main.content {
             }
         }
 
-        .grid-post-meta {
+        .grid-post-read-more {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0 20px 0;
+            padding: 20px 0 20px 0;
+            a {
+                background-color: #a385be;
+                padding: 15px 20px 15px 20px;
+                @include border-top-radius(5px);
+                @include border-right-radius(5px);
+                @include border-bottom-radius(5px);
+                @include border-left-radius(5px);
+                color: #fff;
+                text-transform: lowercase;
+            }
         }
     }
 }
