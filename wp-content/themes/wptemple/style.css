@@ -460,7 +460,7 @@ main.content {
     min-height: 400px; }
     main.content .grid-post-area .grid-post-upper {
       position: relative;
-      min-height: 400px; }
+      min-height: 100px; }
       main.content .grid-post-area .grid-post-upper .grid-post-thumbnail {
         width: 100%;
         height: auto; }
