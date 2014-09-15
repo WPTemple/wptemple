@@ -18,20 +18,28 @@ function wpt_home_loop() {
         echo '<span class="well">No Posts</span>';
         return;
     }
+
+    for ($i = 0; $i < count($posts); $i++) {
+        $post = $posts[$i];
+        if ($i === 0) { 
+            $extra_class = 'top';
+        } elseif ($i & 1) {
+            $extra_class = 'odd';
+        } else {
+            $extra_class = 'even';
+        }
 ?>
-    <?php for ($i = 0; $i < count($posts); $i++): ?>
-    <?php $post = $posts[$i]; ?>
-    <div class="grid-post-area<?php echo ($i === 0) ? ' top' : ''; ?>">
-        <a href="<?php echo get_permalink($post->ID); ?>">
-            <img class="grid-post-thumbnail" src="<?php echo get_thumbnail($post); ?>">
-        </a>
-        <a href="<?php echo get_permalink($post->ID); ?>">
-            <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
-        </a>
-        <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
-    </div>
-    <?php endfor; ?>
+        <div class="grid-post-area <?php echo $extra_class;?>">
+            <a href="<?php echo get_permalink($post->ID); ?>">
+                <img class="grid-post-thumbnail" src="<?php echo get_thumbnail($post); ?>">
+            </a>
+            <a href="<?php echo get_permalink($post->ID); ?>">
+                <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
+            </a>
+            <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
+        </div>
 <?php
+    }
 }
 
 function get_thumbnail($post) {
