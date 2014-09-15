@@ -23,15 +23,19 @@ function wpt_home_loop() {
         $post = $posts[$i];
         if ($i === 0) { 
             $extra_class = 'top';
-        } elseif ($i & 1) {
-            $extra_class = 'odd';
+            $thumbnail_size = 'large';
         } else {
-            $extra_class = 'even';
+            $thumbnail_size = 'medium';
+            if ($i & 1) {
+                $extra_class = 'odd';
+            } else {
+                $extra_class = 'even';
+            }
         }
 ?>
         <div class="grid-post-area <?php echo $extra_class;?>">
             <a href="<?php echo get_permalink($post->ID); ?>">
-                <img class="grid-post-thumbnail" src="<?php echo get_thumbnail($post); ?>">
+                <?php echo get_grid_thumbnail($post, $thumbnail_size); ?>
             </a>
             <div class="grid-post-content-box">
                 <a href="<?php echo get_permalink($post->ID); ?>">
@@ -44,10 +48,10 @@ function wpt_home_loop() {
     }
 }
 
-function get_thumbnail($post) {
+function get_grid_thumbnail($post, $size = 'medium') {
     if (has_post_thumbnail($post->ID)) {
-        $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'single-post-thumbnail'));
-        return $thumbnail[0];
+        $thumbnail = get_the_post_thumbnail($post->ID, $size, array('class' => 'grid-post-thumbnail'));
+        return $thumbnail;
     } else {
         return '';
     }
