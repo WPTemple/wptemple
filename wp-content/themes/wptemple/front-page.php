@@ -39,9 +39,13 @@ function wpt_home_loop() {
         }, $categories);
 
         $tags = get_the_tags($post->ID);
-        $tag_links = array_map(function ($tag) {
-            return '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
-        }, $tags);
+        if (is_array($tags) && count($tags)) {
+            $tag_links = array_map(function ($tag) {
+                return '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+            }, $tags);
+        } else {
+            $tag_links = array('none');
+        }
 
         $comments = get_comments_number($post->ID);
 ?>
