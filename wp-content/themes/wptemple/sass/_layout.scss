@@ -47,5 +47,11 @@ main.content {
                 @include omega;
             }
         }
+
+        .grid-post-meta {
+            .grid-post-categories {
+                float: right;
+            }
+        }
     }
 }

@@ -471,6 +471,8 @@ main.content {
         margin-right: 0; }
       main.content .grid-post-area:not(.top).even {
         margin-right: 0; }
+    main.content .grid-post-area .grid-post-meta .grid-post-categories {
+      float: right; }
 
 .site-header {
   background: #333;
