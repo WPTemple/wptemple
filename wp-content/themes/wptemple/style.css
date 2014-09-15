@@ -460,7 +460,7 @@ main.content {
     min-height: 400px; }
     main.content .grid-post-area .grid-post-upper {
       position: relative;
-      min-height: 400px; }
+      min-height: 100px; }
       main.content .grid-post-area .grid-post-upper .grid-post-thumbnail {
         width: 100%;
         height: auto; }
@@ -476,6 +476,11 @@ main.content {
       margin-top: 30px; }
     main.content .grid-post-area .grid-post-content-box {
       padding: 10px; }
+      main.content .grid-post-area .grid-post-content-box .grid-post-meta {
+        margin-bottom: 10px; }
+        main.content .grid-post-area .grid-post-content-box .grid-post-meta span {
+          display: block;
+          margin: 5px 0 5px 0; }
       main.content .grid-post-area .grid-post-content-box .grid-post-read-more {
         width: 100%;
         text-align: center;

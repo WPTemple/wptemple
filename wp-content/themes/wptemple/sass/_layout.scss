@@ -35,7 +35,7 @@ main.content {
 
         .grid-post-upper {
             position: relative;
-            min-height: 400px;
+            min-height: 100px;
             .grid-post-thumbnail {
                 width: 100%;
                 height: auto;
@@ -58,6 +58,13 @@ main.content {
 
         .grid-post-content-box {
             padding: 10px;
+            .grid-post-meta {
+                margin-bottom: 10px;
+                span {
+                    display: block;
+                    margin: 5px 0 5px 0;
+                }
+            }
             .grid-post-read-more {
                 width: 100%;
                 text-align: center;
