@@ -33,6 +33,11 @@ main.content {
         margin-bottom: 30px;
         min-height: 400px;
 
+        .grid-post-thumbnail {
+            width: 100%;
+            height: auto;
+        }
+
         &.top {
             margin-top: 30px;
         }
@@ -49,9 +54,6 @@ main.content {
         }
 
         .grid-post-meta {
-            .grid-post-categories {
-                float: right;
-            }
         }
     }
 }
