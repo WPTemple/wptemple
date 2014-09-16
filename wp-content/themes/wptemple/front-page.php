@@ -52,7 +52,7 @@ function wpt_home_loop() {
         <div class="grid-post-area <?php echo $extra_class;?>">
             <div class="grid-post-upper">
                 <a href="<?php echo get_permalink($post->ID); ?>">
-                    <?php echo get_grid_thumbnail($post, $thumbnail_size); ?>
+                    <?php echo get_grid_thumbnail($post, true, $thumbnail_size); ?>
                 </a>
                 <span class="grid-post-comment-count"><?php printf(ngettext('%d comment', '%d comments', $comments), $comments); ?></span>
             </div>
@@ -74,12 +74,16 @@ function wpt_home_loop() {
     }
 }
 
-function get_grid_thumbnail($post, $size = 'medium') {
+function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
     if (has_post_thumbnail($post->ID)) {
         $thumbnail = get_the_post_thumbnail($post->ID, $size, array('class' => 'grid-post-thumbnail'));
         return $thumbnail;
     } else {
-        return '';
+        if ($use_placeholder) {
+            return '<img class="grid-post-thumbnail" src="' . get_stylesheet_directory_uri() . '/images/home-placeholder-' . $size . '.gif">';
+        } else {
+            return '';
+        }
     }
 }
 
