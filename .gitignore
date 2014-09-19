@@ -14,3 +14,4 @@ wp-content/mu-plugins
 .sass-cache
 .sass-cache/*
 *.old
+.DS_Store
