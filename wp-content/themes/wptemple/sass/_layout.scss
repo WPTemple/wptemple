@@ -2,6 +2,7 @@ $visual-grid: true;
 $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
+
 .site-inner {
     @include outer-container;
     margin-top: 40px;
@@ -122,6 +123,13 @@ main.content {
             @include span-columns(6);
             &.even {
                 @include omega;
+            }
+        }
+
+        @include media($mobile) {
+            &:not(.top) {
+                @include span-columns(12);
+                max-width: 100%;
             }
         }
     }
