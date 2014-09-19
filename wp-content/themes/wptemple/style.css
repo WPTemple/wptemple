@@ -732,6 +732,17 @@ main.content {
       width: 65.88078%; }
       .footer-widgets .wrap .footer-widgets-2:last-child {
         margin-right: 0; }
+    @media screen and (max-width: 500px) {
+      .footer-widgets .wrap .footer-widgets-1,
+      .footer-widgets .wrap .footer-widgets-2 {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 314.84594%;
+        max-width: 100%; }
+        .footer-widgets .wrap .footer-widgets-1:last-child,
+        .footer-widgets .wrap .footer-widgets-2:last-child {
+          margin-right: 0; } }
 
 .site-footer {
   padding-bottom: 40px;

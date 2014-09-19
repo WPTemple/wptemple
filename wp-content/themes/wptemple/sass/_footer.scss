@@ -11,6 +11,14 @@
         .footer-widgets-2 {
             @include span-columns(8);
         }
+
+        @include media($mobile) {
+            .footer-widgets-1,
+            .footer-widgets-2 {
+                @include span-columns(12);
+                max-width: 100%;
+            }
+        }
     }
 }
 
