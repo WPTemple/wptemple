@@ -1,18 +1,29 @@
 .footer-widgets {
-  background: $dark;
-  color: $light;
-  .wrap {
-    @include outer-container;
-  }
-}
-.site-footer {
-  background: $dark;
-  color: $light;
-  .wrap {
-    @include outer-container;
+    padding: 40px 0 20px 0;
+    background: $dark;
+    color: $light;
+    .wrap {
+        @include outer-container;
+        .footer-widgets-1 {
+            @include span-columns(4);
+        }
+
+        .footer-widgets-2 {
+            @include span-columns(8);
+        }
     }
-  p {
-    margin: 0;
-    text-align: center;
-  }
+}
+
+.site-footer {
+    padding-bottom: 40px;
+    background: $dark;
+    color: $light;
+    .wrap {
+        @include outer-container;
+    }
+
+    p {
+        margin: 0;
+        text-align: center;
+    }
 }

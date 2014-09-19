@@ -698,6 +698,7 @@ main.content {
   font-size: 24px; }
 
 .footer-widgets {
+  padding: 40px 0 20px 0;
   background: #333333;
   color: white; }
   .footer-widgets .wrap {
@@ -708,8 +709,23 @@ main.content {
       content: "";
       display: table;
       clear: both; }
+    .footer-widgets .wrap .footer-widgets-1 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .footer-widgets .wrap .footer-widgets-1:last-child {
+        margin-right: 0; }
+    .footer-widgets .wrap .footer-widgets-2 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .footer-widgets .wrap .footer-widgets-2:last-child {
+        margin-right: 0; }
 
 .site-footer {
+  padding-bottom: 40px;
   background: #333333;
   color: white; }
   .site-footer .wrap {
