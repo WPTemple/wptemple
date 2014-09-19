@@ -26,6 +26,7 @@ $visual-grid-opacity: 0.1;
 }
 
 /* Homepage */
+$top-image-max-height: 500px;
 main.content {
     @include outer-container;
     .grid-post-area {
@@ -36,9 +37,11 @@ main.content {
         .grid-post-upper {
             position: relative;
             min-height: 100px;
+            max-height: ($top-image-max-height / 2);
             .grid-post-thumbnail {
                 width: 100%;
-                height: auto;
+                height: 100%;
+                max-height: ($top-image-max-height / 2);
             }
 
             .grid-post-comment-count {
@@ -54,6 +57,14 @@ main.content {
 
         &.top {
             margin-top: 30px;
+            .grid-post-upper {
+                max-height: $top-image-max-height;
+                .grid-post-thumbnail {
+                    height: 100%;
+                    width: 100%;
+                    max-height: $top-image-max-height;
+                }
+            }
         }
 
         .grid-post-content-box {
