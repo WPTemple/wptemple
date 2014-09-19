@@ -2,22 +2,46 @@ $visual-grid: true;
 $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
-.site-inner{
+.site-inner {
     @include outer-container;
+    margin-top: 40px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .content {
-      @include span-columns(8);
+        @include span-columns(8);
+        text-align: justify;
 
-      @include media($mobile) {
-        @include span-columns(4);
-      }
+        @include media($mobile) {
+            @include span-columns(4);
+        }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #a385be;
+            font-weight: normal;
+        }
+
+        line-height: 1.5;
+
+        .entry-meta {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
-    .siebar {
-      @include span-columns(4);
-      @include media($mobile) {
+
+    .sidebar {
         @include span-columns(4);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
     }
-  }
 }
 
 /* Full Width Content */
