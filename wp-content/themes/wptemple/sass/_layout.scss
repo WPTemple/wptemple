@@ -41,8 +41,14 @@ $visual-grid-opacity: 0.1;
 
     .sidebar {
         @include span-columns(4);
-        @include media($mobile) {
-            @include span-columns(4);
+    }
+
+    @include media($mobile) {
+        .content,
+        .sidebar {
+            @include span-columns(12);
+            max-width: 100%;
+            padding: 0px 10px 0px 10px;
         }
     }
 }

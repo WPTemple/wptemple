@@ -446,14 +446,18 @@ body {
     width: 31.76157%; }
     .site-inner .sidebar:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 500px) {
-      .site-inner .sidebar {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 100%; }
-        .site-inner .sidebar:last-child {
-          margin-right: 0; } }
+  @media screen and (max-width: 500px) {
+    .site-inner .content,
+    .site-inner .sidebar {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 314.84594%;
+      max-width: 100%;
+      padding: 0px 10px 0px 10px; }
+      .site-inner .content:last-child,
+      .site-inner .sidebar:last-child {
+        margin-right: 0; } }
 
 /* Full Width Content */
 .full-width-content .site-inner .content {
