@@ -140,6 +140,9 @@ main.content {
                 @include span-columns(12);
                 max-width: 100%;
             }
+
+            min-height: 400px !important;
+            height: auto !important;
         }
     }
 }
