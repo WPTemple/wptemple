@@ -65,7 +65,7 @@ main.content {
     .grid-post-area {
         background-color: #e9e9e9;
         margin-bottom: 30px;
-        min-height: 400px;
+        height: 700px;
 
         .grid-post-upper {
             position: relative;
@@ -90,6 +90,7 @@ main.content {
 
         &.top {
             margin-top: 30px;
+            min-height: 850px;
             .grid-post-upper {
                 max-height: $top-image-max-height;
                 .grid-post-thumbnail {

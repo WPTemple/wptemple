@@ -480,7 +480,7 @@ main.content {
   main.content .grid-post-area {
     background-color: #e9e9e9;
     margin-bottom: 30px;
-    min-height: 400px; }
+    height: 700px; }
     main.content .grid-post-area .grid-post-upper {
       position: relative;
       min-height: 100px;
@@ -498,7 +498,8 @@ main.content {
         color: #fff;
         text-transform: lowercase; }
     main.content .grid-post-area.top {
-      margin-top: 30px; }
+      margin-top: 30px;
+      min-height: 850px; }
       main.content .grid-post-area.top .grid-post-upper {
         max-height: 500px; }
         main.content .grid-post-area.top .grid-post-upper .grid-post-thumbnail {
