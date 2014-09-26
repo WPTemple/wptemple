@@ -406,7 +406,8 @@ body {
     content: "";
     display: table;
     clear: both; }
-  .site-inner img {
+  .site-inner img,
+  .site-inner .wp-caption {
     max-width: 100%;
     height: auto; }
   .site-inner .content {
@@ -415,6 +416,7 @@ body {
     margin-right: 2.35765%;
     width: 65.88078%;
     text-align: justify;
+    float: left;
     line-height: 1.5; }
     .site-inner .content:last-child {
       margin-right: 0; }

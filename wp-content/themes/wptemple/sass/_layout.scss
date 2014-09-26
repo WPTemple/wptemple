@@ -6,7 +6,8 @@ $visual-grid-opacity: 0.1;
 .site-inner {
     @include outer-container;
     margin-top: 40px;
-    img {
+    img,
+    .wp-caption {
         max-width: 100%;
         height: auto;
     }
@@ -14,6 +15,7 @@ $visual-grid-opacity: 0.1;
     .content {
         @include span-columns(8);
         text-align: justify;
+        float: left;
 
         @include media($mobile) {
             @include span-columns(4);
