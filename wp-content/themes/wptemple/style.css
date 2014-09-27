@@ -119,7 +119,8 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'droid-sans', sans-serif; }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -211,7 +212,15 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.entry-title,
+#title {
+  font-family: raleway, sans-serif;
   font-size: 2em;
   margin: 0; }
 
