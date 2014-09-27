@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: WPTemple
 Theme URI: https://www.wptemple.com
@@ -9,12 +10,95 @@ Template Version: 2.1.2
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+/* Web Fonts */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Raleway:900);
 /* Import Bourbon & Neat */
-* {
+/* Neat 1.7.0.pre
+ * http://neat.bourbon.io
+ * Copyright 2012–2014 thoughtbot, inc.
+ * MIT License */
+/**
+ * Disable all deprecation warnings. Defaults to `false`. Set with a `!global` flag.
+ *
+ * @type Bool
+ */
+html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/**
+ * Makes an element a outer container by centring it in the viewport, clearing its floats, and setting its `max-width`.
+ *
+ * Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page, as long as they are not nested.
+ *
+ * @param {Number} $local-max-width ($max-width) - Max width to be applied to the element. Can be a percentage or a measure.
+ *
+ * @example scss
+ *  .element {
+ *    @include outer-container(100%);
+ *  }
+ *
+ * @example css
+ *  .element {
+ *    *zoom: 1;
+ *    max-width: 100%;
+ *    margin-left: auto;
+ *    margin-right: auto;
+ *  }
+ *
+ *  .element:before, .element:after {
+ *    content: " ";
+ *    display: table;
+ *  }
+ *
+ *  .element:after {
+ *    clear: both;
+ *  }
+ */
+/**
+ * Changes the display property used by other mixins called in the code block argument.
+ *
+ * @param {String} $display (block) - Display value to be used within the block. Can be `table` or `block`.
+ *
+ * @example scss
+ *   @include display(table) {
+ *    .display-table {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .display-table {
+ *      display: table-cell;
+ *      ...
+ *   }
+ */
+/**
+ * Changes the direction property used by other mixins called in the code block argument.
+ *
+ * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ *
+ * @example scss
+ *   @include direction(right-to-left) {
+ *    .right-to-left-block {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .right-to-left-block {
+ *     float: right;
+ *      ...
+ *   }
+ */
 /* Import Local Variables and Mixins */
 /* Import Local Styles */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -386,7 +470,7 @@ p {
   margin: 0; }
 
 a {
-  color: #a385be;
+  color: #A385BE;
   text-decoration: none; }
   a:hover {
     color: #725d85; }
@@ -554,7 +638,7 @@ main.content {
             margin-right: 0; } }
 
 .site-header {
-  background: #333333;
+  background: #333;
   padding-top: 15px; }
   .site-header aside.header-widget-area {
     float: left;
@@ -580,7 +664,7 @@ main.content {
     .site-header .title-area:last-child {
       margin-right: 0; }
   .site-header .site-description {
-    color: white; }
+    color: #fff; }
 
 .header-image .title-area {
   float: left; }
@@ -611,7 +695,7 @@ main.content {
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  color: #333333;
+  color: #333;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -628,12 +712,12 @@ main.content {
     float: left; }
   .genesis-nav-menu a {
     border: none;
-    color: #333333;
+    color: #333;
     display: block;
     padding: 1.75rem 1.5rem;
     position: relative; }
     .genesis-nav-menu a:hover {
-      color: #333333; }
+      color: #333; }
   .genesis-nav-menu .sub-menu {
     left: -9999px;
     opacity: 0;
@@ -675,7 +759,7 @@ main.content {
 /* Site Header Navigation
 --------------------------------------------- */
 .site-header .genesis-nav-menu a {
-  color: #333333; }
+  color: #333; }
 
 .site-header .sub-menu {
   border-top: 1px solid #eee; }
@@ -685,25 +769,25 @@ main.content {
 /* Primary Navigation
 --------------------------------------------- */
 .nav-primary {
-  background-color: white; }
+  background-color: #fff; }
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
   color: #fff;
-  background: #a385be; }
+  background: #A385BE; }
 
 .sub-menu {
   padding: 0; }
 
 .nav-primary .sub-menu a {
-  background-color: #a385be; }
+  background-color: #A385BE; }
   .nav-primary .sub-menu a:hover {
-    color: white; }
+    color: #fff; }
 
 /* Secondary Navigation
 --------------------------------------------- */
 .nav-secondary a {
-  color: #333333; }
+  color: #333; }
 
 .nav-secondary .sub-menu {
   border-top: 1px solid #eee; }
@@ -718,8 +802,8 @@ main.content {
 
 .footer-widgets {
   padding: 40px 0 20px 0;
-  background: #333333;
-  color: white; }
+  background: #333;
+  color: #fff; }
   .footer-widgets .wrap {
     max-width: 68em;
     margin-left: auto;
@@ -756,8 +840,8 @@ main.content {
 
 .site-footer {
   padding-bottom: 40px;
-  background: #333333;
-  color: white; }
+  background: #333;
+  color: #fff; }
   .site-footer .wrap {
     max-width: 68em;
     margin-left: auto;
@@ -769,34 +853,3 @@ main.content {
   .site-footer p {
     margin: 0;
     text-align: center; }
-
-form#commentform p {
-  padding: 10px;
-  font-size: 14px; }
-  form#commentform p label {
-    float: left;
-    width: 20%; }
-  form#commentform p input[type="text"],
-  form#commentform p input[type="email"],
-  form#commentform p input[type="url"],
-  form#commentform p textarea {
-    width: 50%;
-    padding: 5px; }
-  form#commentform p input[type="submit"],
-  form#commentform p button {
-    background-color: #a385be;
-    padding: 15px 20px 15px 20px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: none;
-    color: #fff;
-    text-transform: lowercase; }
-  form#commentform p.form-allowed-tags {
-    background-color: #fdfdfd;
-    border: 1px solid #dadada; }
