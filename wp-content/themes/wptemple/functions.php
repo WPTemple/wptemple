@@ -45,7 +45,7 @@ function wpt_code_snippets() {
 	$labels = array(
 		'name'                => _x( 'Code Snippets', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'Code Snippet', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Post Type', 'text_domain' ),
+		'menu_name'           => __( 'Snippets', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
 		'all_items'           => __( 'All Items', 'text_domain' ),
 		'view_item'           => __( 'View Item', 'text_domain' ),
