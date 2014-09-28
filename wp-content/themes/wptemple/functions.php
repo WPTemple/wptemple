@@ -39,11 +39,12 @@ add_theme_support( 'custom-header', array(
 //* WPT Code Snippets CPT
 
 // Register Custom Post Type
+// Register Custom Post Type
 function wpt_code_snippets() {
 
 	$labels = array(
-		'name'                => _x( 'Post Types', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Post Type', 'Post Type Singular Name', 'text_domain' ),
+		'name'                => _x( 'Code Snippets', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Code Snippet', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'           => __( 'Post Type', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
 		'all_items'           => __( 'All Items', 'text_domain' ),
@@ -57,11 +58,11 @@ function wpt_code_snippets() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
 	$args = array(
-		'label'               => __( 'post_type', 'text_domain' ),
-		'description'         => __( 'Post Type Description', 'text_domain' ),
+		'label'               => __( 'code_snippets', 'text_domain' ),
+		'description'         => __( 'Code Snippets for WP Temple', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array( 'category' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -69,14 +70,14 @@ function wpt_code_snippets() {
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 5,
-		'menu_icon'						=> 'dashicons-editor-code',
+		'menu_icon'						=> 'dashicon-editor-code';
 		'can_export'          => true,
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 	);
-	register_post_type( 'post_type', $args );
+	register_post_type( 'code_snippets', $args );
 
 }
 
