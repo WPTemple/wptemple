@@ -58,7 +58,7 @@ function wpt_code_snippets() {
 		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
 	);
 	$args = array(
-		'label'               => __( 'code_snippets', 'text_domain' ),
+		'label'               => __( 'code-snippets', 'text_domain' ),
 		'description'         => __( 'Code Snippets for WP Temple', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( ),
