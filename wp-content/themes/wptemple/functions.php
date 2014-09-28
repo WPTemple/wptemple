@@ -76,6 +76,7 @@ function wpt_code_snippets() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
+        'rewrite'             => array( 'slug' => 'snippets'),
 	);
 	register_post_type( 'code_snippets', $args );
 
