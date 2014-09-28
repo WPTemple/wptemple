@@ -47,7 +47,7 @@ function wpt_code_snippets() {
 		'singular_name'       => _x( 'Code Snippet', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'           => __( 'Snippets', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Items', 'text_domain' ),
+		'all_items'           => __( 'All Snippets', 'text_domain' ),
 		'view_item'           => __( 'View Item', 'text_domain' ),
 		'add_new_item'        => __( 'Add New Item', 'text_domain' ),
 		'add_new'             => __( 'Add New', 'text_domain' ),
