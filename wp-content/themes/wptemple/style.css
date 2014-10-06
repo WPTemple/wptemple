@@ -803,7 +803,21 @@ main.content {
   .nav-secondary .sub-menu .sub-menu {
     margin-top: -55px; }
 
-.sidebar .widgettitle {
+article {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75); }
+
+.sidebar-primary .widget-wrap {
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75); }
+.sidebar-primary .widgettitle {
   padding: 20px;
   text-align: center;
   border-bottom: 2px solid #000;
