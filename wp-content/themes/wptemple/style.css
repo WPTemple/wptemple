@@ -822,6 +822,8 @@ article {
   font-size: 24px;
   font-family: raleway;
   margin-bottom: 10px; }
+.sidebar-primary .widget_adrotate_widgets {
+  text-align: center; }
 
 .footer-widgets {
   padding: 40px 0 20px 0;
