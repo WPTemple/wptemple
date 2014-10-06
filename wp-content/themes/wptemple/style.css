@@ -807,22 +807,21 @@ article {
   background: #fff;
   padding: 20px;
   margin-bottom: 15px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75); }
+  border: 2px solid #a385be; }
 
 .sidebar-primary .widget-wrap {
   background: #fff;
-  padding: 20px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  padding: 10px;
+  border: 2px solid #a385be;
   margin-bottom: 15px; }
 .sidebar-primary .widgettitle {
-  padding: 20px;
+  padding: 15px 10px 5px;
   text-align: center;
-  border-bottom: 2px solid #000;
-  font-size: 24px; }
+  border-bottom: 2px solid #a385be;
+  color: #a385be;
+  font-size: 24px;
+  font-family: raleway;
+  margin-bottom: 10px; }
 
 .footer-widgets {
   padding: 40px 0 20px 0;
