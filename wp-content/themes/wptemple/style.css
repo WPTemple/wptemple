@@ -825,6 +825,67 @@ article {
 .sidebar-primary .widget_adrotate_widgets {
   text-align: center; }
 
+form#commentform p {
+  padding: 10px;
+  font-size: 14px; }
+  form#commentform p label {
+    float: left;
+    width: 20%; }
+  form#commentform p input[type="text"],
+  form#commentform p input[type="email"],
+  form#commentform p input[type="url"],
+  form#commentform p textarea {
+    width: 50%;
+    padding: 5px; }
+  form#commentform p input[type="submit"],
+  form#commentform p button {
+    background-color: #a385be;
+    padding: 15px 20px 15px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    color: #fff;
+    text-transform: lowercase; }
+  form#commentform p.form-allowed-tags {
+    background-color: #fdfdfd;
+    border: 1px solid #dadada; }
+
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #ddd inset;
+  padding: 1rem;
+  width: 100%;
+  color: #7f7f7f; }
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+  background-color: #707070;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 1rem;
+  width: auto;
+  color: #fff;
+  font-size: inherit; }
+
+button:hover,
+input:hover[type="button"],
+input:hover[type="submit"],
+.btn:hover {
+  background-color: #725d85; }
+
 .footer-widgets {
   padding: 40px 0 20px 0;
   background: #333;
