@@ -13,7 +13,9 @@ remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'wpt_home_loop');
 
 function wpt_home_loop() {
-    $posts = get_home_posts();
+    $query = get_home_posts();
+    $posts = ($query->have_posts()) ? $query->get_posts() : array();
+
     if (!count($posts)) {
         echo '<span class="well">No Posts</span>';
         return;
@@ -72,6 +74,14 @@ function wpt_home_loop() {
         </div>
 <?php
     }
+
+    $big = 9999999;
+    echo paginate_links(array(
+        'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format'    => '?paged=%#%',
+        'current'   => max(1, get_query_var('paged')),
+        'total'     => $query->max_num_pages
+    ));
 }
 
 function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
@@ -93,11 +103,11 @@ function get_home_posts() {
         'post_status'       => 'publish',
         'posts_per_page'    => 5,
         'orderby'           => 'date',
-        'order'             => 'DESC'
+        'order'             => 'DESC',
+        'paged'             => get_query_var('paged')
     );
 
-    $query = new WP_Query($args);
-    return ($query->have_posts()) ? $query->get_posts() : array();
+    return new WP_Query($args);
 }
 
 genesis();
