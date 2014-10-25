@@ -13,23 +13,27 @@ remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'wpt_home_loop');
 
 function wpt_home_loop() {
-    $posts = get_home_posts();
+    $query = get_home_posts();
+    $front_page = get_query_var('paged') === 0;
+    $posts = ($query->have_posts()) ? $query->get_posts() : array();
+
     if (!count($posts)) {
         echo '<span class="well">No Posts</span>';
         return;
     }
 
+    $item_no = ($front_page) ? 0 : 1;
     for ($i = 0; $i < count($posts); $i++) {
         $post = $posts[$i];
-        if ($i === 0) { 
+        if ($item_no++ === 0) { 
             $extra_class = 'top';
             $thumbnail_size = 'large';
         } else {
             $thumbnail_size = 'medium';
-            if ($i & 1) {
-                $extra_class = 'odd';
-            } else {
+            if ($item_no & 1) {
                 $extra_class = 'even';
+            } else {
+                $extra_class = 'odd';
             }
         }
 
@@ -72,6 +76,14 @@ function wpt_home_loop() {
         </div>
 <?php
     }
+
+    $big = 9999999;
+    echo paginate_links(array(
+        'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format'    => '?paged=%#%',
+        'current'   => max(1, get_query_var('paged')),
+        'total'     => $query->max_num_pages
+    ));
 }
 
 function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
@@ -88,16 +100,17 @@ function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
 }
 
 function get_home_posts() {
+    $page = get_query_var('paged');
     $args = array(
         'post_type'         => 'post',
         'post_status'       => 'publish',
-        'posts_per_page'    => 5,
+        'posts_per_page'    => $page === 0 ? 5 : 6,
         'orderby'           => 'date',
-        'order'             => 'DESC'
+        'order'             => 'DESC',
+        'paged'             => $page
     );
 
-    $query = new WP_Query($args);
-    return ($query->have_posts()) ? $query->get_posts() : array();
+    return new WP_Query($args);
 }
 
 genesis();
