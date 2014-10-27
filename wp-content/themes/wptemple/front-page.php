@@ -76,7 +76,7 @@ function wpt_home_loop() {
         </div>
 <?php
     }
-
+echo '<div class="pagination">';
     $big = 9999999;
     echo paginate_links(array(
         'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
@@ -85,6 +85,8 @@ function wpt_home_loop() {
         'total'     => $query->max_num_pages
     ));
 }
+
+echo '</div>';
 
 function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
     if (has_post_thumbnail($post->ID)) {
