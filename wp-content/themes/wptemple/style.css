@@ -421,7 +421,7 @@ body {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px; }
+  padding-top: 80px; }
   .site-inner:after {
     content: "";
     display: table;
@@ -579,7 +579,10 @@ main.content {
   margin-bottom: 20px; }
 
 .site-header {
-  background: #333; }
+  background: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 99; }
   .site-header aside.header-widget-area {
     float: left;
     display: block;

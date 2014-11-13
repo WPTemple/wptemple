@@ -5,7 +5,7 @@ $visual-grid-opacity: 0.1;
 
 .site-inner {
     @include outer-container;
-    margin-top: 40px;
+    padding-top: 80px;
     img,
     .wp-caption {
         max-width: 100%;
