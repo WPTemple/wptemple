@@ -1,10 +1,8 @@
 .site-header {
   background: $dark;
-  padding-top: 15px;
   
   aside.header-widget-area {
       @include span-columns(6);
-      margin-top: 25px;
   }
   .wrap {
       @include outer-container;
@@ -15,6 +13,22 @@
     }
     .site-description {
         color: $light;
+    }
+    .genesis-nav-menu {
+        text-align: right;
+        margin: 0;
+        line-height: 1;
+        .menu-item {
+                display: inline-block;
+                float: none;
+            a {
+                color: #fff;
+                padding: 44px 18px 40px;
+            }
+        }
+        .current-menu-item {
+            background: $color-cta;
+        }
     }
 
 }
