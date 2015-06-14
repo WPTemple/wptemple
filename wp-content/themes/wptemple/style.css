@@ -497,8 +497,7 @@ main.content {
       position: relative;
       max-height: 150px;
       overflow: hidden; }
-      main.content .grid-post-area .grid-post-upper R
-      .grid-post-comment-count {
+      main.content .grid-post-area .grid-post-upper .grid-post-comment-count {
         position: absolute;
         bottom: 30px;
         right: 0px;
