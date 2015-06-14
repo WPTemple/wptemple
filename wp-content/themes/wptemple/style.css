@@ -12,18 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Web Fonts */
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Raleway:900);
 /* Import Bourbon & Neat */
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit; }
 
 /* Import Local Variables and Mixins */
@@ -422,10 +414,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px; }
-  .site-inner:after {
+  .site-inner::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .site-inner img,
   .site-inner .wp-caption {
     max-width: 100%;
@@ -493,10 +485,10 @@ main.content {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto; }
-  main.content:after {
+  main.content::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   main.content .grid-post-area {
     background-color: #e9e9e9;
     margin-bottom: 30px;
@@ -543,12 +535,12 @@ main.content {
           padding: 15px 20px 15px 20px;
           border-top-left-radius: 5px;
           border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
           border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
           border-bottom-left-radius: 5px;
           border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
           border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
           color: #fff;
           text-transform: lowercase; }
     main.content .grid-post-area:not(.top) {
@@ -594,10 +586,10 @@ main.content {
     max-width: 75em;
     margin-left: auto;
     margin-right: auto; }
-    .site-header .wrap:after {
+    .site-header .wrap::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   .site-header .title-area {
     float: left;
     display: block;
@@ -639,10 +631,10 @@ main.content {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto; }
-  .header-image .site-header .wrap:after {
+  .header-image .site-header .wrap::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
 .genesis-nav-menu {
   max-width: 75em;
@@ -656,10 +648,10 @@ main.content {
   width: 100%;
   padding-left: 0;
   margin-top: 0; }
-  .genesis-nav-menu:after {
+  .genesis-nav-menu::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .genesis-nav-menu .menu-item {
     display: block;
     text-align: left;
@@ -865,10 +857,10 @@ input[type="search"]::-webkit-search-results-button {
     max-width: 75em;
     margin-left: auto;
     margin-right: auto; }
-    .footer-widgets .wrap:after {
+    .footer-widgets .wrap::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     .footer-widgets .wrap .footer-widgets-1 {
       float: left;
       display: block;
@@ -903,10 +895,10 @@ input[type="search"]::-webkit-search-results-button {
     max-width: 75em;
     margin-left: auto;
     margin-right: auto; }
-    .site-footer .wrap:after {
+    .site-footer .wrap::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
   .site-footer p {
     margin: 0;
     text-align: center; }
