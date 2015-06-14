@@ -69,14 +69,9 @@ main.content {
 
         .grid-post-upper {
             position: relative;
-            min-height: 100px;
             max-height: ($top-image-max-height / 2);
-            .grid-post-thumbnail {
-                width: 100%;
-                height: 100%;
-                max-height: ($top-image-max-height / 2);
-            }
-
+	    overflow: hidden;
+R
             .grid-post-comment-count {
                 position: absolute;
                 bottom: 30px;
@@ -86,6 +81,10 @@ main.content {
                 color: #fff;
                 text-transform: lowercase;
             }
+
+	    .grid-post-thumbnail {
+                width: 100%;
+            }
         }
 
         &.top {
@@ -93,11 +92,6 @@ main.content {
             min-height: 850px;
             .grid-post-upper {
                 max-height: $top-image-max-height;
-                .grid-post-thumbnail {
-                    height: 100%;
-                    width: 100%;
-                    max-height: $top-image-max-height;
-                }
             }
         }
 

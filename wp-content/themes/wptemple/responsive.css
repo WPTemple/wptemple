@@ -1,0 +1,64 @@
+/*
+Error: Undefined mixin 'media'.
+        on line 21 of sass/responsive.scss, in `media'
+        from line 21 of sass/responsive.scss
+
+16:     padding: 10px;
+17: }
+18: .nav-primary .responsive-menu-icon::before {
+19:     color: #fff;
+20: }
+21: @include media($mobile) {
+22:     .genesis-nav-menu.responsive-menu {
+23:         display: none;
+24:     }
+25: 
+26:     .genesis-nav-menu.responsive-menu .menu-item,
+
+Backtrace:
+sass/responsive.scss:21:in `media'
+sass/responsive.scss:21
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:98:in `with_mixin'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:293:in `watch'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/plugin.rb:108:in `method_missing'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/exec/base.rb:52:in `parse'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/lib/sass/exec/base.rb:19:in `parse!'
+/home/zovt/.gem/ruby/2.2.0/gems/sass-3.4.14/bin/sass:13:in `<top (required)>'
+/home/zovt/.gem/ruby/2.2.0/bin/sass:23:in `load'
+/home/zovt/.gem/ruby/2.2.0/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'media'.\A         on line 21 of sass/responsive.scss, in `media'\A         from line 21 of sass/responsive.scss\A \A 16:     padding: 10px;\A 17: }\A 18: .nav-primary .responsive-menu-icon::before {\A 19:     color: #fff;\A 20: }\A 21: @include media($mobile) {\A 22:     .genesis-nav-menu.responsive-menu {\A 23:         display: none;\A 24:     }\A 25: \A 26:     .genesis-nav-menu.responsive-menu .menu-item,"; }
