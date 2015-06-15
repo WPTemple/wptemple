@@ -566,16 +566,24 @@ main.content {
   margin-bottom: 20px; }
 
 /* Articles */
-main.content article h2 {
-  margin-bottom: 0.5em;
-  padding-top: 0.1em; }
-main.content article p {
-  margin-bottom: 0.4em; }
-main.content #comments ol {
-  list-style-type: none;
-  padding-left: 0; }
-main.content #comments ul {
-  list-style-type: none; }
+main.content article {
+  margin-bottom: 2em; }
+  main.content article h2 {
+    margin-bottom: 0.5em;
+    padding-top: 0.1em; }
+  main.content article p {
+    margin-bottom: 0.4em; }
+main.content #comments {
+  margin-bottom: 2em; }
+  main.content #comments article {
+    margin-bottom: 0.8em; }
+  main.content #comments ol {
+    list-style-type: none;
+    padding-left: 0; }
+  main.content #comments ul {
+    list-style-type: none; }
+main.content #respond {
+  margin-bottom: 1.75em; }
 
 .grid-post-title {
   text-align: left; }
@@ -776,13 +784,12 @@ input,
 select,
 textarea {
   background-color: #fff;
-  border: 1px solid #A385BE;
-  color: #666;
+  border: 2px solid #A385BE;
+  color: #333;
   font-size: 1.5em !important;
   font-weight: 300 !important;
   padding: 16px;
   width: 100% !important;
-  text-align: center !important;
   margin: 5px auto !important;
   font-family: "droid sans" !important; }
 

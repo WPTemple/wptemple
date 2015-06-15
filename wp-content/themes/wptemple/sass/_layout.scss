@@ -160,9 +160,15 @@ main.content {
 	p {
 	    margin-bottom: 0.4em;
 	}
+
+	margin-bottom: 2em;
     }
 
     #comments {
+	article {
+	    margin-bottom: 0.8em;
+	}
+	
 	ol {
 	    list-style-type: none;
 	    padding-left: 0;
@@ -171,5 +177,11 @@ main.content {
 	ul {
 	    list-style-type: none;
 	}
+
+	margin-bottom: 2em;
+    }
+
+    #respond {
+	margin-bottom: 1.75em;
     }
 }
