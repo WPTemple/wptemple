@@ -584,6 +584,11 @@ main.content #comments {
     list-style-type: none; }
 main.content #respond {
   margin-bottom: 1.75em; }
+  main.content #respond textarea {
+    border: 2px solid #A385BE;
+    text-align: left; }
+    main.content #respond textarea:focus {
+      border: 2px solid #999; }
 
 .grid-post-title {
   text-align: left; }
@@ -784,10 +789,11 @@ input,
 select,
 textarea {
   background-color: #fff;
-  border: 2px solid #A385BE;
+  border: 1px solid #A385BE;
   color: #333;
   font-size: 1.5em !important;
   font-weight: 300 !important;
+  text-align: center;
   padding: 16px;
   width: 100% !important;
   margin: 5px auto !important;
@@ -795,7 +801,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 2px solid #999;
+  border: 1px solid #999;
   outline: none; }
 
 input[type="checkbox"],
@@ -804,12 +810,12 @@ input[type="radio"] {
   width: auto; }
 
 ::-moz-placeholder {
-  color: #333;
+  color: #666;
   font-weight: 300;
   opacity: 1; }
 
 ::-webkit-input-placeholder {
-  color: #333;
+  color: #666;
   font-weight: 300; }
 
 button,

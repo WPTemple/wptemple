@@ -183,5 +183,14 @@ main.content {
 
     #respond {
 	margin-bottom: 1.75em;
+
+	textarea {
+	    border: 2px solid $color-cta;
+	    text-align: left;
+
+	    &:focus {
+		border: 2px solid #999;
+	    }
+	}
     }
 }

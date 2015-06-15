@@ -2,10 +2,11 @@ input,
 select,
 textarea {
   background-color: #fff;
-  border: 2px solid $color-cta;
+  border: 1px solid $color-cta;
   color: #333;
   font-size: 1.5em!important;
   font-weight: 300!important;
+  text-align: center;
   padding: 16px;
   width: 100%!important;
   margin: 5px auto!important;
@@ -14,7 +15,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border: 2px solid #999;
+    border: 1px solid #999;
     outline: none;
 }
 
@@ -25,14 +26,14 @@ input[type="radio"] {
 }
 
 ::-moz-placeholder {
-  color: #333;
-  font-weight: 300;
-  opacity: 1;
+    color: #666;
+    font-weight: 300;
+    opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-  color: #333;
-  font-weight: 300;
+    color: #666;
+    font-weight: 300;
 }
 
 button,
