@@ -5,7 +5,7 @@ $visual-grid-opacity: 0.1;
 
 .site-inner {
     @include outer-container;
-    padding-top: 80px;
+    padding-top: 120px;
     img,
     .wp-caption {
         max-width: 100%;
@@ -88,7 +88,6 @@ main.content {
         }
 
         &.top {
-            margin-top: 30px;
             min-height: 850px;
             .grid-post-upper {
                 max-height: $top-image-max-height;

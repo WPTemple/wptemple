@@ -413,7 +413,7 @@ body {
   max-width: 75em;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 80px; }
+  padding-top: 120px; }
   .site-inner::after {
     clear: both;
     content: "";
@@ -508,7 +508,6 @@ main.content {
       main.content .grid-post-area .grid-post-upper .grid-post-thumbnail {
         width: 100%; }
     main.content .grid-post-area.top {
-      margin-top: 30px;
       min-height: 850px; }
       main.content .grid-post-area.top .grid-post-upper {
         max-height: 300px; }
