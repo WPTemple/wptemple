@@ -12,6 +12,7 @@ add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_c
 remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'wpt_home_loop');
 
+
 function wpt_home_loop() {
     $query = get_home_posts();
     $front_page = get_query_var('paged') === 0;
@@ -27,14 +28,14 @@ function wpt_home_loop() {
         $post = $posts[$i];
         if ($item_no++ === 0) { 
             $extra_class = 'top';
-            $thumbnail_size = 'large';
+          $thumbnail_size = 'homepage-featured-large';
         } else {
-            $thumbnail_size = 'medium';
-            if ($item_no & 1) {
-                $extra_class = 'even';
-            } else {
-                $extra_class = 'odd';
-            }
+          $thumbnail_size = 'homepage-featured';
+          if ($item_no & 1) {
+            $extra_class = 'even';
+          } else {
+            $extra_class = 'odd';
+          }
         }
 
         $categories = get_the_category($post->ID);
@@ -51,29 +52,30 @@ function wpt_home_loop() {
             $tag_links = array('none');
         }
 
-        $comments = get_comments_number($post->ID);
+      $comments = get_comments_number($post->ID);
 ?>
-        <div class="grid-post-area <?php echo $extra_class;?>">
-            <div class="grid-post-upper">
-                <a href="<?php echo get_permalink($post->ID); ?>">
-                    <?php echo get_grid_thumbnail($post, true, $thumbnail_size); ?>
-                </a>
-                <span class="grid-post-comment-count"><?php printf(ngettext('%d comment', '%d comments', $comments), $comments); ?></span>
-            </div>
-            <div class="grid-post-content-box">
-                <a href="<?php echo get_permalink($post->ID); ?>">
-                    <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
-                </a>
-                <div class="grid-post-meta">
-                    <span class="grid-post-published">Published <?php echo get_the_date('d M', $post->ID); ?> by <?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
-                    <span class="grid-post-categories">Filed under: <?php echo implode(', ', $category_links); ?>, tags: <?php echo implode(', ', $tag_links); ?></span>
-                </div>
-                <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
-                <div class="grid-post-read-more">
-                    <a href="<?php echo get_permalink($post->ID); ?>">Read More</a>
-                </div>
-            </div>
-        </div>
+<div class="grid-post-area <?php echo $extra_class;?>">
+  <div class="grid-post-upper">
+    <a href="<?php echo get_permalink($post->ID); ?>">
+      <?php echo get_grid_thumbnail($post, true, $thumbnail_size); ?>
+    </a>
+    <span class="grid-post-comment-count"><?php printf(ngettext('%d comment', '%d comments', $comments), $comments); ?></span>
+  </div>
+  <div class="grid-post-content-box">
+    <a href="<?php echo get_permalink($post->ID); ?>">
+      <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
+    </a>
+    <div class="grid-post-meta">
+      <span class="grid-post-published">Published <?php echo get_the_date('d M', $post->ID); ?> by <?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
+      <span class="grid-post-categories">Filed under: <?php echo implode(', ', $category_links); ?>, tags: <?php echo implode(', ', $tag_links); ?></span>
+      <span class="grid-post-share-icons"></span>
+    </div>
+    <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
+    <div class="grid-post-read-more">
+      <a href="<?php echo get_permalink($post->ID); ?>">Read More</a>
+    </div>
+  </div>
+</div>
 <?php
     }
 echo '<div class="pagination">';
@@ -83,17 +85,17 @@ echo '<div class="pagination">';
 
 echo '</div>';
 
-function get_grid_thumbnail($post, $use_placeholder, $size = 'medium') {
-    if (has_post_thumbnail($post->ID)) {
-        $thumbnail = get_the_post_thumbnail($post->ID, $size, array('class' => 'grid-post-thumbnail'));
-        return $thumbnail;
+function get_grid_thumbnail($post, $use_placeholder, $size ) {
+  if (has_post_thumbnail($post->ID)) {
+    $thumbnail = get_the_post_thumbnail($post->ID, $size, array('class' => 'grid-post-thumbnail'));
+    return $thumbnail;
+  } else {
+    if ($use_placeholder) {
+      return '<img class="grid-post-thumbnail" src="' . get_stylesheet_directory_uri() . '/images/home-placeholder-' . $size . '.gif">';
     } else {
-        if ($use_placeholder) {
-            return '<img class="grid-post-thumbnail" src="' . get_stylesheet_directory_uri() . '/images/home-placeholder-' . $size . '.gif">';
-        } else {
-            return '';
-        }
+      return '';
     }
+  }
 }
 
 function get_home_posts() {

@@ -573,15 +573,6 @@ main.content article {
     padding-top: 0.1em; }
   main.content article p {
     margin-bottom: 0.4em; }
-main.content #comments {
-  margin-bottom: 2em; }
-  main.content #comments article {
-    margin-bottom: 0.8em; }
-  main.content #comments ol {
-    list-style-type: none;
-    padding-left: 0; }
-  main.content #comments ul {
-    list-style-type: none; }
 main.content #respond {
   margin-bottom: 1.75em; }
   main.content #respond textarea {
