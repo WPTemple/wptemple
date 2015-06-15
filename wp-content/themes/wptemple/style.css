@@ -448,7 +448,8 @@ body {
     .site-inner .content h6 {
       color: #a385be;
       font-weight: normal;
-      text-align: left; }
+      text-align: left;
+      line-height: 1.2; }
     .site-inner .content .entry-meta {
       margin-top: 10px;
       margin-bottom: 10px; }
@@ -565,10 +566,10 @@ main.content {
   margin-bottom: 20px; }
 
 /* Articles */
-main.content h2 {
+main.content article h2 {
   margin-bottom: 0.5em;
   padding-top: 0.1em; }
-main.content p {
+main.content article p {
   margin-bottom: 0.4em; }
 
 .grid-post-title {
