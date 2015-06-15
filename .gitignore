@@ -2,7 +2,8 @@
 latest.tar.gz
 phpmyadmin
 wp-config.php
-wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/genesis-simple-share
 wp-content/uploads/
 wp-content/upgrade/
 config.codekit
