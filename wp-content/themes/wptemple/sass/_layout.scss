@@ -29,6 +29,7 @@ $visual-grid-opacity: 0.1;
         h6 {
             color: #a385be;
             font-weight: normal;
+            text-align: left;
         }
 
         line-height: 1.5;
@@ -71,7 +72,7 @@ main.content {
             position: relative;
             max-height: ($top-image-max-height / 2);
 	    overflow: hidden;
-              
+            
             .grid-post-comment-count {
                 position: absolute;
                 bottom: 30px;
@@ -144,4 +145,17 @@ main.content {
     text-align: center;
     font-size: 1.3em;
     margin-bottom: 20px;
+}
+
+
+/* Articles */
+main.content {
+    h2 {
+	margin-bottom: 0.5em;
+	padding-top: 0.1em;
+    }
+
+    p {
+	margin-bottom: 0.4em;
+    }
 }

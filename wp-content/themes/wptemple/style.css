@@ -447,7 +447,8 @@ body {
     .site-inner .content h5,
     .site-inner .content h6 {
       color: #a385be;
-      font-weight: normal; }
+      font-weight: normal;
+      text-align: left; }
     .site-inner .content .entry-meta {
       margin-top: 10px;
       margin-bottom: 10px; }
@@ -562,6 +563,13 @@ main.content {
   text-align: center;
   font-size: 1.3em;
   margin-bottom: 20px; }
+
+/* Articles */
+main.content h2 {
+  margin-bottom: 0.5em;
+  padding-top: 0.1em; }
+main.content p {
+  margin-bottom: 0.4em; }
 
 .grid-post-title {
   text-align: left; }
