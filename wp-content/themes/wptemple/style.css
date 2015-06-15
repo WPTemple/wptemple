@@ -571,6 +571,11 @@ main.content article h2 {
   padding-top: 0.1em; }
 main.content article p {
   margin-bottom: 0.4em; }
+main.content #comments ol {
+  list-style-type: none;
+  padding-left: 0; }
+main.content #comments ul {
+  list-style-type: none; }
 
 .grid-post-title {
   text-align: left; }
