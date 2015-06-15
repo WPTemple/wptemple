@@ -53,6 +53,7 @@ function wpt_home_loop() {
         }
 
       $comments = get_comments_number($post->ID);
+      global $Genesis_Simple_Share;
 ?>
 <div class="grid-post-area <?php echo $extra_class;?>">
   <div class="grid-post-upper">
@@ -68,7 +69,7 @@ function wpt_home_loop() {
     <div class="grid-post-meta">
       <span class="grid-post-published">Published <?php echo get_the_date('d M', $post->ID); ?> by <?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
       <span class="grid-post-categories">Filed under: <?php echo implode(', ', $category_links); ?>, tags: <?php echo implode(', ', $tag_links); ?></span>
-      <span class="grid-post-share-icons"></span>
+      <span class="grid-post-share-icons"><?php echo genesis_share_get_icon_output( 'home-page-post-' . $post->ID, $Genesis_Simple_Share->icons ) ?></span>
     </div>
     <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
     <div class="grid-post-read-more">
