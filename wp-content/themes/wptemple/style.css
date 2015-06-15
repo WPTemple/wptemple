@@ -795,7 +795,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 1px solid #999;
+  border: 2px solid #999;
   outline: none; }
 
 input[type="checkbox"],
