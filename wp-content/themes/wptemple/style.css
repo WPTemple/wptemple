@@ -613,7 +613,8 @@ main.content {
     align-items: center;
     justify-content: center; }
     .pagination-container ul li {
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 0.5em; }
   .pagination-container .pagination a {
     display: inline-block;
     color: #FFF;
