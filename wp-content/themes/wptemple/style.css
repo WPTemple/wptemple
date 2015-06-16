@@ -606,6 +606,10 @@ main.content {
       clear: both;
       content: "";
       display: table; }
+  .pagination-container ul {
+    list-style-type: none; }
+    .pagination-container ul li {
+      display: inline; }
   .pagination-container .pagination a {
     display: inline-block;
     color: #FFF;

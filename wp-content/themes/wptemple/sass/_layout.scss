@@ -188,6 +188,14 @@ main.content {
 	max-width: 100%;
 	width: 50%;
     }
+
+    ul {
+	list-style-type: none;
+	
+	li {
+	    display: inline;
+	}
+    }
     
     .pagination a {
 	display: inline-block;
