@@ -612,8 +612,8 @@ main.content {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding-left: 30%;
-    padding-right: 30%; }
+    padding-left: 20%;
+    padding-right: 20%; }
     .pagination-container ul li {
       display: inline-block;
       width: 100%; }
