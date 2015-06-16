@@ -606,9 +606,9 @@ main.content {
       clear: both;
       content: "";
       display: table; }
-  .pagination-container archive-pagination ul {
+  .pagination-container ul {
     list-style-type: none; }
-    .pagination-container archive-pagination ul li {
+    .pagination-container ul li {
       display: inline;
       width: 100%; }
   .pagination-container .pagination a {
