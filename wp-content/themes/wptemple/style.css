@@ -609,11 +609,9 @@ main.content {
   .pagination-container ul {
     list-style-type: none;
     display: flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
-    justify-content: center;
-    padding-left: 20%;
-    padding-right: 20%; }
+    justify-content: center; }
     .pagination-container ul li {
       display: inline-block;
       width: 100%; }

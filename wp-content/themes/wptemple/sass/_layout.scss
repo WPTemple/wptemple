@@ -192,11 +192,9 @@ main.content {
     ul {
 	list-style-type: none;
 	display: flex;
-	width: 100%;
+	width: 50%;
 	align-items: center;
 	justify-content: center;
-	padding-left: 20%;
-	padding-right: 20%;
 	
 	li {
 	    display: inline-block;
