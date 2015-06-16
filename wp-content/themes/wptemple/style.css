@@ -570,10 +570,50 @@ main.content {
           main.content .grid-post-area:not(.top):last-child {
             margin-right: 0; } }
 
-.pagination {
+/* Pagination */
+.pagination-container {
   text-align: center;
-  font-size: 1.3em;
-  margin-bottom: 20px; }
+  font-size: 16pt;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .pagination-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .pagination-container .archive-pagination {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .pagination-container .archive-pagination::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .pagination-container .alignleft {
+    max-width: 100%;
+    width: 50%; }
+    .pagination-container .alignleft::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .pagination-container .alignright {
+    max-width: 100%;
+    width: 50%; }
+    .pagination-container .alignright::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .pagination-container .pagination a {
+    display: inline-block;
+    color: #FFF;
+    background-color: #a385be;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 20px;
+    min-width: 200px; }
 
 /* Articles */
 main.content article {

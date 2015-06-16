@@ -85,7 +85,7 @@ function wpt_home_loop() {
 	   echo '</div>';
 }
 }
-echo '<div class="pagination">';
+echo '<div class="pagination-container">';
   genesis_posts_nav();
   wp_reset_query();
   }

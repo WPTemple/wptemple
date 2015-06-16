@@ -157,10 +157,47 @@ main.content {
     }
 
 }
-.pagination {
+
+/* Pagination */
+.pagination-container {
     text-align: center;
-    font-size: 1.3em;
-    margin-bottom: 20px;
+    font-size: 16pt;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include clearfix;
+
+    .archive-pagination {
+	@include clearfix;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    }
+
+    .alignleft {
+	@include clearfix;
+	max-width: 100%;
+	width: 50%;
+    }
+    
+    .alignright {
+	@include clearfix;
+	max-width: 100%;
+	width: 50%;
+    }
+    
+    .pagination a {
+	display: inline-block;
+	color: #FFF;
+	background-color: #a385be;
+	text-align: center;
+	border-radius: 5px;
+	padding: 15px 20px;
+	min-width: 200px;
+    }
 }
 
 
