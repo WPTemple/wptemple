@@ -606,18 +606,18 @@ main.content {
       clear: both;
       content: "";
       display: table; }
-  .pagination-container ul {
+  .pagination-container archive-pagination ul {
     list-style-type: none; }
-    .pagination-container ul li {
-      display: inline; }
+    .pagination-container archive-pagination ul li {
+      display: inline;
+      width: 100%; }
   .pagination-container .pagination a {
     display: inline-block;
     color: #FFF;
     background-color: #a385be;
     text-align: center;
     border-radius: 5px;
-    padding: 15px 20px;
-    min-width: 200px; }
+    padding: 15px 20px; }
 
 /* Articles */
 main.content article {
