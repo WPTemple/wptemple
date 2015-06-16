@@ -67,7 +67,7 @@ function wpt_home_loop() {
       <h2 class="grid-post-title"><?php echo $post->post_title; ?></h2>
     </a>
     <div class="grid-post-meta">
-      <span class="grid-post-meta">Published by <? echo get_the_author_meta( 'display_name', $post->post_author) ?> on <?php echo get_the_date( 'F j, Y', $post->ID ) ?> in <?php echo implode(', ', $category_links); ?></span>
+      <span class="grid-post-meta">By <? echo get_the_author_meta( 'display_name', $post->post_author) ?> on <?php echo get_the_date( 'F j, Y', $post->ID ) ?> in <?php echo implode(', ', $category_links); ?></span>
       <span class="grid-post-share-icons"><?php echo genesis_share_get_icon_output( 'home-page-post-' . $post->ID, $Genesis_Simple_Share->icons ) ?></span>
     </div>
     <p class="grid-post-excerpt"><?php echo (!empty($post->post_excerpt)) ? $post->post_excerpt : wp_trim_words($post->post_content); ?></p>
