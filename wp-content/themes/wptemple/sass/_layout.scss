@@ -199,6 +199,12 @@ main.content {
 	li {
 	    display: inline-block;
 	    margin-right: 0.5em;
+
+	    &.active a {
+		background-color: rgba(0, 0, 0, 0);
+		border: 1px solid #a385be;
+		color: #a385be;
+	    }
 	}
     }
     

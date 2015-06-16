@@ -615,6 +615,10 @@ main.content {
     .pagination-container ul li {
       display: inline-block;
       margin-right: 0.5em; }
+      .pagination-container ul li.active a {
+        background-color: transparent;
+        border: 1px solid #a385be;
+        color: #a385be; }
   .pagination-container .pagination a {
     display: inline-block;
     color: #FFF;
