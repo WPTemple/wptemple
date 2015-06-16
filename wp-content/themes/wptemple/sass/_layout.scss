@@ -191,9 +191,14 @@ main.content {
 
     ul {
 	list-style-type: none;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
 	
 	li {
-	    display: inline;
+	    display: inline-block;
 	    width: 100%;
 	}
     }

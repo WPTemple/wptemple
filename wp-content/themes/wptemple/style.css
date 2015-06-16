@@ -607,9 +607,13 @@ main.content {
       content: "";
       display: table; }
   .pagination-container ul {
-    list-style-type: none; }
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
     .pagination-container ul li {
-      display: inline;
+      display: inline-block;
       width: 100%; }
   .pagination-container .pagination a {
     display: inline-block;
