@@ -97,12 +97,11 @@ function wpt_post_info ( $post_info ) {
    }
 }
 
-add_action( 'wp_enque_scripts', 'disqus_count' );
-
-function disqus_count() {
-   wp_enqueue_script('disqus_count','http://wp-temple.disqus.com/count.js');
-   return '<a href="'. get_permalink() .'#disqus_thread"></a>';
-}
+/* add_action( 'wp_enque_scripts', 'disqus_count' );
+/* function disqus_count() {
+/*   wp_enqueue_script('disqus_count','http://wp-temple.disqus.com/count.js');
+/*   return '<a href="'. get_permalink() .'#disqus_thread"></a>';
+/* } 
 
 // Hook into the 'init' action
 add_action( 'init', 'wpt_code_snippets', 0 );
