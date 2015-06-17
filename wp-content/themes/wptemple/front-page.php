@@ -6,12 +6,12 @@
  * @package WP Temple 
  * @subpackage Customizations
  */
-require_once( ABSPATH . '/wp-content/plugins/genesis-simple-share/lib/front-end.php' );
 
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'wpt_home_loop');
+
 
 function wpt_home_loop() {
    $item_no = (is_front_page()) ? 0 : 1;
@@ -99,17 +99,20 @@ return '';
 }
 }
 
-remove_action( 'genesis_entry_footer', 'genesis_post_meta', 10 );
-remove_action( 'genesis_loop', array( $Genesis_Simple_Share, 'start_icon_actions' ), 5 );
-remove_action( 'genesis_loop', array( $Genesis_Simple_Share, 'end_icon_actions' ), 15 );
+function get_home_posts() {
+$page = get_query_var('paged');
+$args = array(
+'post_type'         => 'post',
+'post_status'       => 'publish',
+'posts_per_page'    => $page === 0 ? 5 : 6,
+'orderby'           => 'date',
+'order'             => 'DESC',
+'paged'             => $page
+);
 
-add_action( 'genesis_entry_footer', 'wpt_share', 10);
-
-function wpt_share() {
-  global $Genesis_Simple_Share;
-  
-  echo genesis_share_get_icon_output( 'home-' . get_the_ID(), $Genesis_Simple_Share->icons );
+return new WP_Query($args);
 }
 
 genesis();
+
 ?>

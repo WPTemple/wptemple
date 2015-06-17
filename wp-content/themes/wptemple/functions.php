@@ -85,8 +85,8 @@ function wpt_code_snippets() {
 }
 
 // Add front-page featured image size
-add_image_size( 'homepage-featured-image', 1200, 300, TRUE );
-add_image_size( 'homepage-grid-image', 595, 150, TRUE );
+add_image_size( 'homepage-featured-large', 1200, 300, TRUE );
+add_image_size( 'homepage-featured', 595, 150, TRUE );
 
 // Hook into the 'init' action
 add_action( 'init', 'wpt_code_snippets', 0 );
