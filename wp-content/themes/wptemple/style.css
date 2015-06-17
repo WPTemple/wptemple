@@ -575,9 +575,7 @@ main.content {
   text-align: center;
   font-size: 16pt;
   height: 6em;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  display: block; }
   .pagination-container::after {
     clear: both;
     content: "";

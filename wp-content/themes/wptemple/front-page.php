@@ -79,6 +79,9 @@ if ( $extra_class === 'even' ) {
    echo '</div>';
 }
 }
+if ( $extra_class === 'odd' ) {
+   echo '</div>';
+}
 echo '<div class="pagination-container">';
 genesis_posts_nav();
 wp_reset_query();
