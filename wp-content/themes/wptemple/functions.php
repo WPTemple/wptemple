@@ -97,6 +97,8 @@ function wpt_post_info ( $post_info ) {
    }
 }
 
+add_action( 'wp_enque_scripts', 'disqus_count' );
+
 function disqus_count() {
    wp_enqueue_script('disqus_count','http://wp-temple.disqus.com/count.js');
    return '<a href="'. get_permalink() .'#disqus_thread"></a>';
