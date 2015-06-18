@@ -255,6 +255,10 @@ body.single {
 	    }
 	}
 
+	div.pagination-previous {
+	    margin-right: 5px;
+	}
+
 	a {
 	    display: block;
 	    padding: 15px 20px;
@@ -305,6 +309,12 @@ body.single {
     li[class^="pagination"] {
 	order: 1;
 	-webkit-order: 1;
+    }
+
+    body.single {
+	    p {
+		text-align: left !important;
+	    }
     }
 }
 
