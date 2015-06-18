@@ -105,6 +105,12 @@ body.single {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-around;
+
+	-webkit-display: flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-webkit-justify-content: space-around;
+
 	margin-bottom: 10px;
     }
 
@@ -117,6 +123,12 @@ body.single {
 	flex-wrap: nowrap;
 	align-items: baseline;
 
+	-webkit-display: flex;
+	-webkit-flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-webkit-align-items: baseline;
+
+	
 	flex: 1;
 
 	@include omega(2n);
@@ -155,6 +167,11 @@ body.single {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-around;
+
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-webkit-justify-content: space-around;
 
 	span {
 	    padding: 5px 0px;
