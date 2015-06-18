@@ -22,7 +22,7 @@ $mobile: new-breakpoint(max-width 768px 4);
     display: -ms-flexbox;
     display: flex;
 }
-	     
+
 /* General Styling, applies to articles as well */
 .site-inner {
     padding-top: 120px;
@@ -30,28 +30,28 @@ $mobile: new-breakpoint(max-width 768px 4);
     padding-right: 20px;
     
     @include display-flexbox();
-    @include vendor-prefix(flex-direction, row);
-    @include vendor-prefix(flex-wrap, nowrap);
-    @include vendor-prefix(justify-content, space-around);
-    @include vendor-prefix(align-self, center);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-self: center;
 
     .content-sidebar-wrap {
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, row);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(justify-content, space-around);
-	@include vendor-prefix(max-width, 1200px);
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	max-width: 1200px;
 
 	.content {
 	    @include display-flexbox();
-	    @include vendor-prefix(flex-direction, column);
-	    @include vendor-prefix(flex,2);
+	    flex-direction: column;
+	    flex: 2;
 	}
 
 	.sidebar {
 	    @include display-flexbox();
-	    @include vendor-prefix(flex-direction, column);
-	    @include vendor-prefix(flex,1);
+	    flex-direction: column;
+	    flex: 1;
 	    padding-left: 15px;
 	}
 
@@ -82,32 +82,32 @@ body.single {
 /* Homepage styling */
 .site-inner main.content {
     @include display-flexbox();
-    @include vendor-prefix(flex-direction, column);
-    @include vendor-prefix(flex, 1);
-    @include vendor-prefix(flex-wrap, nowrap);
-    @include vendor-prefix(justify-content, space-around);
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     max-width: 1200px;
 
     .grid-post-area.top {
 	margin-bottom: 10px;
 
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(justify-content, center);
-	@include vendor-prefix(align-items, center);
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
 
 	.grid-post-content-box {
 	    @include display-flexbox();
-	    @include vendor-prefix(flex-direction, column);
-	    @include vendor-prefix(justify-content, flex-start);
-	    @include vendor-prefix(align-items, flex-start);
+	    flex-direction: column;
+	    justify-content: flex-start;
+	    align-items: flex-start;
 	}
 	
 	p.grid-post-excerpt {
 	    max-width: 600px;
 	    width: 100%;
-	    @include vendor-prefix(align-self, center);
+	    align-self: center;
 	}
 
 	@include omega;
@@ -115,9 +115,9 @@ body.single {
     
     .grid-post-row {
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, row);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(justify-content, space-around);
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 	margin-bottom: 10px;
     }
 
@@ -126,19 +126,19 @@ body.single {
 	margin-right: 10px;
 
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(align-items, baseline);
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: baseline;
 
-	@include vendor-prefix(flex, 1);
+	flex: 1;
 
 	@include omega(2n);
     }
     
     .grid-post-upper {
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(flex-wrap, nowrap);
+	flex-direction: column;
+	flex-wrap: nowrap;
 	position: relative;
 	width: 100%;
 
@@ -165,13 +165,13 @@ body.single {
 
     div.grid-post-meta {
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(justify-content, space-around);
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 
 	span {
 	    padding: 5px 0px;
-	    
+		
 	    &:last-of-type {
 		padding-bottom: 10px;
 	    }
@@ -180,14 +180,20 @@ body.single {
 
     .grid-post-read-more {
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(flex-wrap, nowrap);
-	@include vendor-prefix(justify-content, center);
-	@include vendor-prefix(align-items, center);
+	display: -webkit-flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+
+	-webkit-flex-direction: column;
+	-webkit-flex-wrap: nowrap;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
 
 	height: 100px;
 	width: 100%;
-	
+
 	a {
 	    background-color: $button-bg-color;
 	    color: white;
@@ -196,46 +202,46 @@ body.single {
 	    text-transform: lowercase;
 	}
     }
-    
+
     .pagination-container {
 	width: 100%;
 	height: 200px;
 
 	@include display-flexbox();
-	@include vendor-prefix(flex-direction, column);
-	@include vendor-prefix(justify-content, center);
-	@include vendor-prefix(align-items, center);
-	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
 	.archive-pagination {
 	    list-style-type: none;
 	    @include display-flexbox();
-	    @include vendor-prefix(flex-direction, row);
-	    @include vendor-prefix(justify-content, center);
-	    @include vendor-prefix(align-items, center);
+	    flex-direction: row;
+	    justify-content: center;
+	    align-items: center; 
 	}
 	
 	ul {
 	    list-style-type: none;
 	    @include display-flexbox();
-	    @include vendor-prefix(flex-direction, row);
-	    @include vendor-prefix(flex-wrap, wrap);
-	    @include vendor-prefix(justify-content, center);
-	    @include vendor-prefix(align-items, center);
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
 	    padding-left: 0px;
 	}
-	
+
 	li {
 	    width: auto;
 	    height: auto;
 	    display: inline-block;
 	    margin-right: 5px;
 	    margin-top: 5px;
-    	    
+    	   
 	    &:last-of-type {
 		margin-right: 0px;
 	    }
 	}
-	
+
 	a {
 	    display: block;
 	    padding: 15px 20px;
@@ -255,11 +261,11 @@ body.single {
     }
     
     .grid-post-row {
-	@include vendor-prefix(flex-direction, column !important);
-	@include vendor-prefix(flex-wrap, nowrap !important);
+	flex-direction: column !important;
+	flex-wrap: nowrap !important;
 	width: 100%;
     }
-    
+
     .grid-post-area {
 	@include omega;
 	margin-bottom: 10px;
@@ -267,7 +273,7 @@ body.single {
 	width: 100%;
 
     }
-    
+
 
     span.grid-post-comment-count {
 	bottom: 10px !important;
@@ -275,7 +281,7 @@ body.single {
     }
     
     .content-sidebar-wrap {
-	@include vendor-prefix(flex-direction, column !important);
+	flex-direction: column !important;
     }
 
     .sidebar {
@@ -284,7 +290,8 @@ body.single {
     }
 
     li[class^="pagination"] {
-	@include vendor-prefix(order, 1);
+	order: 1;
+	-webkit-order: 1;
     }
 }
 
