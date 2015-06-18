@@ -192,6 +192,7 @@ body.single {
 	    list-style-type: none;
 	    display: flex;
 	    flex-direction: row;
+	    flex-wrap: wrap;
 	    justify-content: center;
 	    align-items: center; 
 	}
@@ -237,6 +238,12 @@ body.single {
 
     }
 
+
+    span.grid-post-comment-count {
+	bottom: 10px !important;
+	font-size: 10pt;
+    }
+    
     .content-sidebar-wrap {
 	flex-direction: column !important;
     }
