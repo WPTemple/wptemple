@@ -433,15 +433,20 @@ body {
       display: flex;
       flex-direction: column;
       flex: 1;
-      padding-left: 15px;
-      min-width: 400px; }
+      padding-left: 15px; }
     .site-inner .content-sidebar-wrap .entry-content img {
       width: 100%;
       height: auto; }
 
 /* Article styling */
-body.single .content-sidebar-wrap {
-  max-width: 1200px; }
+body.single div[id^="attachment"] {
+  width: 100% !important; }
+body.single h1, body.single h2 {
+  color: #a385be;
+  line-height: 1.1;
+  margin-bottom: 10px; }
+body.single p {
+  margin-bottom: 15px; }
 
 /* Homepage styling */
 .site-inner main.content {
