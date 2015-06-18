@@ -9,45 +9,34 @@ $button-bg-color: #a385be;
 $header-color: $button-bg-color;
 
 $mobile: new-breakpoint(max-width 768px 4);
-
-@mixin vendor-prefix($name, $argument) {
-    -webkit-#{$name}: #{$argument};
-    -ms-#{$name}: #{$argument};
-    #{$name}: #{$argument};
-}
-
-@mixin display-flexbox() {
-    display: -webkit-flex;
-    display: flex;
-}
-
+	     
 /* General Styling, applies to articles as well */
 .site-inner {
     padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
     
-    @include display-flexbox();
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-self: center;
 
     .content-sidebar-wrap {
-	@include display-flexbox();
+	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	max-width: 1200px;
 
 	.content {
-	    @include display-flexbox();
+	    display: flex;
 	    flex-direction: column;
 	    flex: 2;
 	}
 
 	.sidebar {
-	    @include display-flexbox();
+	    display: flex;
 	    flex-direction: column;
 	    flex: 1;
 	    padding-left: 15px;
@@ -79,7 +68,7 @@ body.single {
 
 /* Homepage styling */
 .site-inner main.content {
-    @include display-flexbox();
+    display: flex;
     flex-direction: column;
     flex: 1;
     flex-wrap: nowrap;
@@ -89,14 +78,14 @@ body.single {
     .grid-post-area.top {
 	margin-bottom: 10px;
 
-	@include display-flexbox();
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 
 	.grid-post-content-box {
-	    @include display-flexbox();
+	    display: flex;
 	    flex-direction: column;
 	    justify-content: flex-start;
 	    align-items: flex-start;
@@ -112,7 +101,7 @@ body.single {
     }
     
     .grid-post-row {
-	@include display-flexbox();
+	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-around;
@@ -123,7 +112,7 @@ body.single {
 	background: $post-bg-color;
 	margin-right: 10px;
 
-	@include display-flexbox();
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-items: baseline;
@@ -134,7 +123,7 @@ body.single {
     }
     
     .grid-post-upper {
-	@include display-flexbox();
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	position: relative;
@@ -162,7 +151,7 @@ body.single {
     }
 
     div.grid-post-meta {
-	@include display-flexbox();
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-around;
@@ -177,7 +166,7 @@ body.single {
     }
 
     .grid-post-read-more {
-	@include display-flexbox();
+	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -205,14 +194,14 @@ body.single {
 	width: 100%;
 	height: 200px;
 
-	@include display-flexbox();
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
 	.archive-pagination {
 	    list-style-type: none;
-	    @include display-flexbox();
+	    display: flex;
 	    flex-direction: row;
 	    justify-content: center;
 	    align-items: center; 
@@ -220,7 +209,7 @@ body.single {
 	
 	ul {
 	    list-style-type: none;
-	    @include display-flexbox();
+	    display: flex;
 	    flex-direction: row;
 	    flex-wrap: wrap;
 	    justify-content: center;
