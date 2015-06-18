@@ -92,7 +92,7 @@ add_image_size( 'homepage-featured', 595, 150, TRUE );
 add_filter( 'genesis_post_info', 'wpt_post_info' );
 function wpt_post_info ( $post_info ) {
    if ( !is_page() ) {
-      $post_info = '[post_date] by [post_author_posts_link] ' . ' [post_edit]';
+      $post_info = '[post_date] by [post_author_posts_link] ' . disqus_count() . ' [post_edit]';
       return $post_info;
    }
 }
