@@ -521,8 +521,12 @@ body.single p {
       .site-inner main.content div.grid-post-meta span:last-of-type {
         padding-bottom: 10px; }
   .site-inner main.content .grid-post-read-more {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -webkit-box;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     height: 100px;

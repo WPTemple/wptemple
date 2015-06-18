@@ -166,10 +166,15 @@ body.single {
     }
 
     .grid-post-read-more {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -webkit-box;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	
 	height: 100px;
 	width: 100%;
 
