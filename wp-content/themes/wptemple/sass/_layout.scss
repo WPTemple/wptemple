@@ -63,6 +63,7 @@ body.single {
 
     p {
 	margin-bottom: 15px;
+	text-align: justify;
     }
 }
 
@@ -91,12 +92,6 @@ body.single {
 	    align-items: flex-start;
 	}
 	
-	p.grid-post-excerpt {
-	    max-width: 600px;
-	    width: 100%;
-	    align-self: center;
-	}
-
 	@include omega;
     }
     

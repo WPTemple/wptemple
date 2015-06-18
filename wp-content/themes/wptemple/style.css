@@ -446,7 +446,8 @@ body.single h1, body.single h2, body.single h3 {
   line-height: 1.1;
   margin-bottom: 10px; }
 body.single p {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  text-align: justify; }
 
 /* Homepage styling */
 .site-inner main.content {
@@ -469,10 +470,6 @@ body.single p {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start; }
-    .site-inner main.content .grid-post-area.top p.grid-post-excerpt {
-      max-width: 600px;
-      width: 100%;
-      align-self: center; }
   .site-inner main.content .grid-post-row {
     display: flex;
     flex-direction: row;
