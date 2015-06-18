@@ -193,8 +193,9 @@ body.single {
 	    display: flex;
 	    flex-direction: row;
 	    flex-wrap: wrap;
-	    justify-content: space-around;
-	    align-items: center; 
+	    justify-content: center;
+	    align-items: center;
+	    padding-left: 0px;
 	}
 
 	li {
@@ -202,7 +203,7 @@ body.single {
 	    height: auto;
 	    display: inline-block;
 	    margin-right: 5px;
-	    margin-top: 10px;
+	    margin-top: 5px;
     	   
 	    &:last-of-type {
 		margin-right: 0px;
@@ -256,6 +257,10 @@ body.single {
     .sidebar {
 	padding-left: 0 !important;
 	margin-top: 15px;
+    }
+
+    li[id^="pagination"] {
+	order: 1;
     }
 }
 

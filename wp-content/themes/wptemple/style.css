@@ -546,14 +546,15 @@ body.single .content-sidebar-wrap {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center; }
+      justify-content: center;
+      align-items: center;
+      padding-left: 0px; }
     .site-inner main.content .pagination-container li {
       width: auto;
       height: auto;
       display: inline-block;
       margin-right: 5px;
-      margin-top: 10px; }
+      margin-top: 5px; }
       .site-inner main.content .pagination-container li:last-of-type {
         margin-right: 0px; }
     .site-inner main.content .pagination-container a {
@@ -591,7 +592,10 @@ body.single .content-sidebar-wrap {
 
   .sidebar {
     padding-left: 0 !important;
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  li[id^="pagination"] {
+    order: 1; } }
 .grid-post-title {
   text-align: left; }
 
