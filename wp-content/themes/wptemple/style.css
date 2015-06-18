@@ -551,15 +551,20 @@ body.single .content-sidebar-wrap {
     .site-inner main.content .pagination-container li {
       width: auto;
       height: auto;
-      margin-right: 5px; }
+      display: inline-block;
+      margin-right: 5px;
+      margin-top: 10px; }
       .site-inner main.content .pagination-container li:last-of-type {
         margin-right: 0px; }
     .site-inner main.content .pagination-container a {
-      background-color: #a385be;
-      color: white;
+      height: 100%;
+      width: 100%;
+      display: block;
       padding: 15px 20px;
       border-radius: 5px;
-      text-transform: lowercase; }
+      text-transform: lowercase;
+      background-color: #a385be;
+      color: white; }
 
 /* Responsive things */
 @media screen and (max-width: 768px) {
