@@ -522,11 +522,11 @@ body.single p {
         padding-bottom: 10px; }
   .site-inner main.content .grid-post-read-more {
     display: flex;
-    display: -webkit-flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    display: -webkit-flex;
     -webkit-flex-direction: column;
     -webkit-flex-wrap: nowrap;
     -webkit-justify-content: center;
@@ -559,6 +559,11 @@ body.single p {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
       padding-left: 0px; }
     .site-inner main.content .pagination-container li {
       width: auto;

@@ -167,12 +167,12 @@ body.single {
 
     .grid-post-read-more {
 	display: flex;
-	display: -webkit-flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 
+	display: -webkit-flex;
 	-webkit-flex-direction: column;
 	-webkit-flex-wrap: nowrap;
 	-webkit-justify-content: center;
@@ -209,11 +209,19 @@ body.single {
 	
 	ul {
 	    list-style-type: none;
+	    
 	    display: flex;
 	    flex-direction: row;
 	    flex-wrap: wrap;
 	    justify-content: center;
 	    align-items: center;
+
+	    display: -webkit-flex;
+	    -webkit-flex-direction: column;
+	    -webkit-flex-wrap: nowrap;
+	    -webkit-justify-content: center;
+	    -webkit-align-items: center;
+
 	    padding-left: 0px;
 	}
 
