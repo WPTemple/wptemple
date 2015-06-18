@@ -259,7 +259,7 @@ body.single {
 	margin-top: 15px;
     }
 
-    li[id^="pagination"] {
+    li[class^="pagination"] {
 	order: 1;
     }
 }
