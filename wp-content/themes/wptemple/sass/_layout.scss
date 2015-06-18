@@ -247,6 +247,12 @@ body.single {
 	    &:last-of-type {
 		margin-right: 0px;
 	    }
+
+	    &.active a {
+		color: $button-bg-color;
+		border: 1px solid $button-bg-color;
+		background-color: rgba(0, 0, 0, 0);
+	    }
 	}
 
 	a {

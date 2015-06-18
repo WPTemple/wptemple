@@ -582,6 +582,10 @@ body.single p {
       margin-top: 5px; }
       .site-inner main.content .pagination-container li:last-of-type {
         margin-right: 0px; }
+      .site-inner main.content .pagination-container li.active a {
+        color: #a385be;
+        border: 1px solid #a385be;
+        background-color: transparent; }
     .site-inner main.content .pagination-container a {
       display: block;
       padding: 15px 20px;
