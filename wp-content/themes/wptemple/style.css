@@ -441,7 +441,7 @@ body {
 /* Article styling */
 body.single div[id^="attachment"] {
   width: 100% !important; }
-body.single h1, body.single h2 {
+body.single h1, body.single h2, body.single h3 {
   color: #a385be;
   line-height: 1.1;
   margin-bottom: 10px; }
