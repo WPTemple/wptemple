@@ -86,7 +86,7 @@ function wpt_code_snippets() {
 
 // Add front-page featured image size
 add_image_size( 'homepage-featured-large', 1200, 300, TRUE );
-add_image_size( 'homepage-featured', 600, 150, TRUE );
+add_image_size( 'homepage-featured', 595, 150, TRUE );
 
 // Change post info
 add_filter( 'genesis_post_info', 'wpt_post_info' );
