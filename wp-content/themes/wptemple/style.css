@@ -546,7 +546,7 @@ body.single .content-sidebar-wrap {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center; }
     .site-inner main.content .pagination-container li {
       width: auto;
