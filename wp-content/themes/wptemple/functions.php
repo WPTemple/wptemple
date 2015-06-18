@@ -92,15 +92,19 @@ add_image_size( 'homepage-featured', 595, 150, TRUE );
 add_filter( 'genesis_post_info', 'wpt_post_info' );
 function wpt_post_info ( $post_info ) {
    if ( !is_page() ) {
-      $post_info = '[post_date] by [post_author_posts_link] ' . disqus_count() . ' [post_edit]';
+      $post_info = '[post_date] by [post_author_posts_link] ' . disqus_count_output() . ' [post_edit]';
       return $post_info;
    }
 }
 
-add_action( 'wp_enque_scripts', 'disqus_count' );
+add_action( 'wp_enqueue_scripts', 'disqus_count' );
 
 function disqus_count() {
-   wp_enqueue_script('disqus_count','http://wp-temple.disqus.com/count.js');
+   wp_register_script( 'disqus_get_count', '//wp-temple.disqus.com/count.js' );
+   wp_enqueue_script( 'disqus_get_count');
+}
+
+function disqus_count_output() {
    return '<a href="'. get_permalink() .'#disqus_thread"></a>';
 }
 
