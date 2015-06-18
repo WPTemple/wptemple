@@ -201,6 +201,11 @@ body.single {
 	li {
 	    width: auto;
 	    height: auto;
+	    margin-right: 5px;
+
+	    &:last-of-type {
+		margin-right: 0px;
+	    }
 	}
 
 	a {
