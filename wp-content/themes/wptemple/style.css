@@ -428,6 +428,7 @@ body {
     .site-inner .content-sidebar-wrap .content {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       flex: 2; }
     .site-inner .content-sidebar-wrap .sidebar {
       display: flex;
